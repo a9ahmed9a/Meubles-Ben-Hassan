@@ -13,7 +13,7 @@
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 	<link href="css/tiny-slider.css" rel="stylesheet">
-	<link href="css/style.css?v=1.4" rel="stylesheet">
+	<link href="css/style.css?v=1.7" rel="stylesheet">
 	<title>Canon EOS 5D Mark IV | Ichhari-Ecom</title>
 </head>
 <body>
@@ -68,41 +68,73 @@
 						<h3>Canon EOS 5D Mark IV</h3>
 						<p class="single-product-pricing"><span>$2439.99</span></p>
 						<p>Elevate your photography with the Canon EOS 5D Mark IV. This powerful DSLR camera is designed for professionals and enthusiasts alike, delivering exceptional image quality and performance. With a 30.4MP full-frame sensor and advanced DIGIC 6+ image processor, the 5D Mark IV captures stunning detail and clarity in every shot. Its robust construction and weather-sealed design make it ideal for shooting in diverse conditions. Whether you're capturing portraits, landscapes, or events, the EOS 5D Mark IV empowers you to unleash your creativity and achieve your vision.</p>
-						<div class="single-product-form">
-							<form action="command.php" methode="post" class="ms-3">
-                                <div class="row">
-                                    <input type="text" id="Prodname" hidden value="Canon EOS 5D Mark IV" class="w-100">
-                                    <div class="col-md-5 col-11">
-                                        <label for="name"><p class="m-1">Entrer Votre Nom : </p></label>
-                                        <br>
-                                        <input type="text" id="name" placeholder="nom Complet" class="w-100">
-                                    </div>
-                                    <div class="col-md-5 col-11">
-                                        <label for="tele"><p class="m-1">Entrer Votre Telephone : </p></label>
-                                        <br>
-                                        <input type="text" placeholder="Telephone" id="tele" class="w-100">
-                                    </div>
-                                    <div class="col-md-5 col-11">
-                                        <label for="qte"><p class="m-1">Entrer la quantite : </p></label>
-                                        <br>
-                                        <input type="number" id="qte" placeholder="quantite" class="w-100">
-                                    </div>
-                                    <div class="col-md-5 col-11">
-                                        <label for="adrss"><p class="m-1">Entrer Votre adresse : </p></label>
-                                        <br>
-                                        <input type="text" placeholder="Adresse" id="adrss" class="w-100">
-                                    </div>     
-                                    <br>
-                                    <div class="col-md-2 col-11">
-                                        <input type="submit" value="Commender" class="cart-btn ">
-                                    </div>                               
-                                </div>
-                                
-							</form>
-							
-						</div>
 					</div>
 				</div>
+
+                <div class="col-md-12 mt-4 single-product-form">
+                    <form action="command.php" methode="post" class="ms-3">
+                        <div class="row align-items-center">
+                            <div class="col-lg-5 p-0">
+                                <input type="text" id="Prodname" hidden value="Canon EOS 5D Mark IV" class="w-100">
+                                <div class="">
+                                    <div class="d-flex">
+                                        <div class="w-10 icon">
+                                            <img src="icons/person-button-svgrepo-com.svg" alt="">
+                                        </div>
+                                        <input type="text" id="name" placeholder="Nom | الإسم الكامل" class="w-100">
+                                    </div>
+                                </div>     
+                                <div class="">
+                                    <div class="d-flex">
+                                        <div class="w-10 icon">
+                                            <img src="icons/telephone-round-svgrepo-com.svg" alt="">
+                                        </div>
+                                        <input type="text" placeholder="Téléphone | رقم الهاتف" id="tele" class="w-100">
+                                    </div>
+                                </div>     
+                                <div class="">
+                                    <div class="d-flex">
+                                        <div class="w-10 icon">
+                                            <img src="icons/map-point-wave-svgrepo-com.svg" alt="">
+                                        </div>
+                                        <input type="text" placeholder="Ville | المدينة" id="adrss" class="w-100">
+                                    </div>
+                                </div>     
+                            </div>         
+                            <div class="col-lg-7 p-0 radio-form me-2">
+                                <input type="radio" id="image1" hidden name="image" value="image1">
+                                <label for="image1" class="d-flex"> 
+                                    <img src="images/footerImage.png" alt="Image 1">
+                                    <div class="radio-form-text d-flex align-items-center w-100">
+                                        <p>1 camera</p>
+                                        <p class="price text-end">100dh</p>
+                                    </div> 
+                                </label>
+            
+                                <input type="radio" id="image2" hidden name="image" value="image1">
+                                <label for="image2" class="d-flex">
+                                    <img src="images/footerImage.png" alt="Image 1">
+                                    <div class="radio-form-text d-flex align-items-center w-100">
+                                        <p>2 camera</p>
+                                        <p class="price text-end">100dh</p>
+                                    </div> 
+                                </label>
+
+                                <input type="radio" id="image3" hidden name="image" value="image1">
+                                <label for="image3" class="d-flex">
+                                    <img src="images/footerImage.png" alt="Image 1">
+                                    <div class="radio-form-text d-flex align-items-center w-100">
+                                        <p>3 camera</p>
+                                        <p class="price text-end">100dh</p>
+                                    </div> 
+                                </label>
+                            </div>  
+                            <div class=" col-11">
+                                <input type="submit" value=" Commander ! اطلب الآن " class="cart-btn w-100">
+                            </div>                
+                        </div>
+                    </form>
+                </div>
 			</div>
 		</div>
 	</div>

@@ -1,6 +1,8 @@
 :root{
   --mainColor : #9a5ee4;
+  --mainColorVar : #9a5ee462;
   --secondColr : #eda320;
+  --secondColrvar : #eda32062;
   --secondaryBtnHover : rgb(217, 164, 30);
   --secondaryBtnColor : #f9bf29;
   --bodyTextColor : #1f1f1f;
@@ -830,7 +832,8 @@ p.product-price span {
   background-color: var(--mainColor);
   color: #fff;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 10px;
+  height: 70px;
 }
 
 .single-product-form .cart-btn i {
@@ -872,10 +875,10 @@ p.single-product-pricing span {
 
 .single-product-form input{
   border: 1px solid #ddd;
-  border-radius: 7px;
+  border-radius: 0 7px 7px 0;
   padding: 10px;
   margin-bottom: 15px;
-  margin-right: 2rem;
+  height: 70px;
 }
 
 .single-product-content h4 {
@@ -915,4 +918,66 @@ p.single-product-pricing span {
 .navbar .custom-social li a:hover {
   background: var(--mainColor);
   color: var(--lightTextColor); 
+}
+
+.single-product-form img{
+  height: 20px;
+  color: #051922;
+  color: #9a5ee4;
+}
+
+.single-product-form .icon{
+  border-radius: 10px 0 0 10px;
+  background-color: var(--mainColor);
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+
+.radio-form label {
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: var(--secondColrvar);
+  border-radius: 10px;
+  width: 80%;
+}
+
+.radio-form input[type="radio"] {
+  display: none; /* Hide the default radio button */
+}
+
+.radio-form img {
+  width: auto;
+  height: 100px;
+  border-radius: 10px 0 0 10px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-right: 0;
+  border: 1px var(--secondColrvar) !important;
+}
+
+.radio-form input[type="radio"]:checked + label {
+  background-color: var(--mainColorVar); 
+}
+
+
+.radio-form-text{
+  height: 100px;
+  margin-left: 0;
+  border: 1px var(--secondColrvar) !important;
+  border-radius: 0 10px 10px 0;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.radio-form-text p{
+  margin: 0;
+  width: 30%;
+}
+
+.radio-form-text .price{
+  width: 65%;
 }
