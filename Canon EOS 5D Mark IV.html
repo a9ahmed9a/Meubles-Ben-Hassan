@@ -80,13 +80,13 @@
                         <form action="command.php" methode="post" class="ms-3">
                             <div class="row align-items-center justify-content-center">
                                 <div class="col-lg-5 p-0">
-                                    <input type="text" id="Prodname" hidden value="Canon EOS 5D Mark IV" class="w-100">
+                                    <input type="text" id="Prodname" name="prodName" hidden value="Canon EOS 5D Mark IV" class="w-100">
                                     <div class="">
                                         <div class="d-flex">
                                             <div class="w-10 icon d-flex align-items-center">
                                                 <img src="icons/person-button-svgrepo-com.svg" alt="">
                                             </div>
-                                            <input type="text" id="name" placeholder="Nom | الإسم الكامل" class="w-100">
+                                            <input type="text" id="name" name="name" placeholder="Nom | الإسم الكامل" class="w-100">
                                         </div>
                                     </div>     
                                     <div class="">
@@ -94,7 +94,7 @@
                                             <div class="w-10 icon d-flex align-items-center">
                                                 <img src="icons/telephone-round-svgrepo-com.svg" alt="">
                                             </div>
-                                            <input type="text" placeholder="Téléphone | رقم الهاتف" id="tele" class="w-100">
+                                            <input type="text" name="tele" placeholder="Téléphone | رقم الهاتف" id="tele" class="w-100">
                                         </div>
                                     </div>     
                                     <div class="">
@@ -102,13 +102,13 @@
                                             <div class="w-10 icon d-flex align-items-center">
                                                 <img src="icons/map-point-wave-svgrepo-com.svg" alt="">
                                             </div>
-                                            <input type="text" placeholder="Ville | المدينة" id="adrss" class="w-100">
+                                            <input type="text" name="ville" placeholder="Ville | المدينة" id="adrss" class="w-100">
                                         </div>
                                     </div>     
                                 </div>  
                                 <div class="col-lg-1"></div>       
                                 <div class="col-lg-6 p-0 radio-form">
-                                    <input type="radio" id="image1" hidden name="image" selected value="image1" checked>
+                                    <input type="radio" id="image1" hidden name="prodvar" value="var1" checked>
                                     <label for="image1" class="d-flex w-auto"> 
                                         <img src="images/footerImage.png" alt="Image 1">
                                         <div class="radio-form-text d-flex align-items-center w-100">
@@ -117,7 +117,7 @@
                                         </div> 
                                     </label>
                 
-                                    <input type="radio" id="image2" hidden name="image" value="image1">
+                                    <input type="radio" id="image2" hidden name="prodvar" value="var2">
                                     <label for="image2" class="d-flex w-auto">
                                         <img src="images/footerImage.png" alt="Image 1">
                                         <div class="radio-form-text d-flex align-items-center w-100">
@@ -129,7 +129,7 @@
                                         </div> 
                                     </label>
 
-                                    <input type="radio" id="image3" hidden name="image" value="image1">
+                                    <input type="radio" id="image3" hidden name="prodvar" value="var3">
                                     <label for="image3" class="d-flex w-auto">
                                         <img src="images/footerImage.png" alt="Image 1">
                                         <div class="radio-form-text d-flex align-items-center w-100">
