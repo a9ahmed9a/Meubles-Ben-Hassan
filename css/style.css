@@ -981,3 +981,22 @@ p.single-product-pricing span {
 .radio-form-text .price{
   width: 65%;
 }
+
+.free-shipping{
+  height: 30px;
+  background-color: var(--secondColr);
+  position: sticky;
+  width: 100%;
+  top: 0;
+}
+
+.free-shipping p{
+  font-family: 'gothic';
+  margin: 0 0 0 15px;
+}
+
+.free-shipping img{
+  height: 25px;
+  margin-bottom: 5px
+}
+

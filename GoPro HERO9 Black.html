@@ -13,8 +13,8 @@
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 	<link href="css/tiny-slider.css" rel="stylesheet">
-	<link href="css/style.css?v=1.4" rel="stylesheet">
-	<title>GoPro HERO9 Black | Ichhari-Ecom</title>
+	<link href="css/style.css?v=1.8" rel="stylesheet">
+	<title>GoPro HERO9 Black Ichhari-Ecom</title>
 </head>
 <body>
     <!-- Start Header/Navigation -->
@@ -53,124 +53,169 @@
     </nav>
     <!-- End Header/Navigation -->
 
-	<!-- single product -->
-	<div class="single-product mt-5 ">
-		<div class="container">
-			<div class="row align-items-center">
-				<div class="col-md-5">
-					<div class="single-product-img">
-						<img src="images/product-4.png" alt="" class="img-fluid">
-					</div>
-				</div>
+    <div class="free-shipping d-flex align-items-center justify-content-center">
+        <img src="icons/truck-svgrepo-com.svg" alt="">
+        <p>FREE shiping</p>
+    </div>
 
-				<div class="col-md-7 mt-4">
-					<div class="single-product-content">
-						<h3>GoPro HERO9 Black</h3>
-						<p class="single-product-pricing"><span>$248.95</span></p>
-						<p>Unleash your creativity and capture stunning moments with the GoPro HERO9 Black. This versatile action camera boasts impressive 5K video and 20MP photos, allowing you to shoot breathtaking footage with incredible clarity. With advanced features like HyperSmooth 3.0 stabilization and TimeWarp 3.0, you can achieve smooth, professional-quality results in any environment. Whether you're documenting your adventures or filming your latest project, the HERO9 Black is built to deliver unmatched performance and reliability.</p>
-						<div class="single-product-form">
-							<form action="Forms/contact.php" method="post" class="ms-3">
-                                <div class="row">
-                                    <input type="text" id="Prodname" name="produit" hidden value="GoPro HERO9 Black">
-                                    <div class="col-md-5 col-11">
-                                        <label for="name"><p class="m-1">Entrer Votre Nom : </p></label>
-                                        <br>
-                                        <input type="text" id="name" name="nom" placeholder="nom Complet" class="w-100">
-                                    </div>
-                                    <div class="col-md-5 col-11">
-                                        <label for="tele"><p class="m-1">Entrer Votre Telephone : </p></label>
-                                        <br>
-                                        <input type="text" name="tel" placeholder="Telephone" id="tele" class="w-100">
-                                    </div>
-                                    <div class="col-md-5 col-11">
-                                        <label for="qte"><p class="m-1">Entrer la quantite : </p></label>
-                                        <br>
-                                        <input type="number" id="qte" name="qte" placeholder="quantite" class="w-100">
-                                    </div>
-                                    <div class="col-md-5 col-11">
-                                        <label for="adrss"><p class="m-1">Entrer Votre adresse : </p></label>
-                                        <br>
-                                        <input type="text" name="adrss" placeholder="Adresse" id="adrss" class="w-100">
+	<div class="container">
+        <!-- single product -->
+        <div class="single-product mt-5 ">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-5">
+                        <div class="single-product-img">
+                            <img src="images/product-4.png" alt="GoPro HERO9 Black" class="img-fluid">
+                        </div>
+                    </div>
+
+                    <div class="col-md-7 mt-4">
+                        <div class="single-product-content">
+                            <h3>GoPro HERO9 Black</h3>
+                            <p>Unleash your creativity and capture stunning moments with the GoPro HERO9 Black. This versatile action camera boasts impressive 5K video and 20MP photos, allowing you to shoot breathtaking footage with incredible clarity. With advanced features like HyperSmooth 3.0 stabilization and TimeWarp 3.0, you can achieve smooth, professional-quality results in any environment. Whether you're documenting your adventures or filming your latest project, the HERO9 Black is built to deliver unmatched performance and reliability.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 mt-4 single-product-form">
+                        <form action="command.php" methode="post" class="ms-3">
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-lg-5 p-0">
+                                    <input type="text" id="Prodname" hidden value="GoPro HERO9 Black" class="w-100">
+                                    <div class="">
+                                        <div class="d-flex">
+                                            <div class="w-10 icon d-flex align-items-center">
+                                                <img src="icons/person-button-svgrepo-com.svg" alt="">
+                                            </div>
+                                            <input type="text" id="name" placeholder="Nom | الإسم الكامل" class="w-100">
+                                        </div>
                                     </div>     
-                                    <br>
-                                    <div class="col-md-2 col-11">
-                                        <input type="submit" value="Commender" class="cart-btn ">
-                                    </div>                               
-                                </div>
-                                
-							</form>
-							
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- end single product -->
+                                    <div class="">
+                                        <div class="d-flex">
+                                            <div class="w-10 icon d-flex align-items-center">
+                                                <img src="icons/telephone-round-svgrepo-com.svg" alt="">
+                                            </div>
+                                            <input type="text" placeholder="Téléphone | رقم الهاتف" id="tele" class="w-100">
+                                        </div>
+                                    </div>     
+                                    <div class="">
+                                        <div class="d-flex">
+                                            <div class="w-10 icon d-flex align-items-center">
+                                                <img src="icons/map-point-wave-svgrepo-com.svg" alt="">
+                                            </div>
+                                            <input type="text" placeholder="Ville | المدينة" id="adrss" class="w-100">
+                                        </div>
+                                    </div>     
+                                </div>  
+                                <div class="col-lg-1"></div>       
+                                <div class="col-lg-6 p-0 radio-form">
+                                    <input type="radio" id="image1" hidden name="image" selected value="image1" checked>
+                                    <label for="image1" class="d-flex w-auto"> 
+                                        <img src="images/product-4.png" alt="Image 1">
+                                        <div class="radio-form-text d-flex align-items-center w-100">
+                                            <p class="w-auto">1 camera</p>
+                                            <p class="price text-end">1000dh</p>
+                                        </div> 
+                                    </label>
+                
+                                    <input type="radio" id="image2" hidden name="image" value="image1">
+                                    <label for="image2" class="d-flex w-auto">
+                                        <img src="images/product-4.png" alt="Image 1">
+                                        <div class="radio-form-text d-flex align-items-center w-100">
+                                            <p class="w-auto">2 camera</p>
+                                            <div class="price text-end">
+                                                <p class="w-100 price text-end"><del>20000dh</del></p>
+                                                <p class="w-100 price text-end">18000dh</p>
+                                            </div>
+                                        </div> 
+                                    </label>
 
-	<!-- more products -->
-	<div class="more-products mt-5">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-8 offset-lg-2 text-center">
-					<div class="section-title mb-1">	
-						<h3><span class="second-color-text">Related</span> Products</h3>
-						<p>You May Also Like</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="product-section">
-                <div class="container">
-                    <div class="row justify-content-between">
-                        <!-- Start Column 2 -->
-                        <div class="col-12 col-md-4 col-lg-3 mb-5 me-3 mb-md-0">
-                            <a class="product-item" href="Insta360 ONE X2.html">
-                                <img src="images/product-2.png" class="img-fluid product-thumbnail">
-                                <h3 class="product-title">Insta360 ONE X2</h3>
-                                <strong class="product-price">$429.99</strong>
-
-                                <span class="icon-cross">
-                                    <img src="images/cross.svg" class="img-fluid">
-                                </span>
-                            </a>
-                        </div> 
-                        <!-- End Column 2 -->
-
-                        <!-- Start Column 3 -->
-                        <div class="col-12 col-md-4 col-lg-3 mb-5 me-3 mb-md-0">
-                            <a class="product-item" href="Fujifilm Instax Mini 11.html">
-                                <img src="images/product-3.png" class="img-fluid product-thumbnail">
-                                <h3 class="product-title">Fujifilm Instax Mini 11</h3>
-                                <strong class="product-price">$80.00</strong>
-
-                                <span class="icon-cross">
-                                    <img src="images/cross.svg" class="img-fluid">
-                                </span>
-                            </a>
-                        </div> 
-                        <!-- End Column 3 -->
-
-                        <!-- Start Column 1 -->
-    					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-    						<a class="product-item" href="Sony Alpha a7 III.html">
-    							<img src="images/product-1.png?v2" class="img-fluid product-thumbnail">
-    							<h3 class="product-title">Sony Alpha a7 III</h3>
-    							<strong class="product-price">$1800.00</strong>
-    
-    							<span class="icon-cross">
-    								<img src="images/cross.svg" class="img-fluid">
-    							</span>
-    						</a>
-    					</div> 
-    					<!-- End Column 1 -->
-    
+                                    <input type="radio" id="image3" hidden name="image" value="image1">
+                                    <label for="image3" class="d-flex w-auto">
+                                        <img src="images/product-4.png" alt="Image 1">
+                                        <div class="radio-form-text d-flex align-items-center w-100">
+                                            <p class="w-auto">3 camera</p>
+                                            <div class="price text-end">
+                                                <p class="w-100 price text-end"><del>30000dh</del></p>
+                                                <p class="w-100 price text-end">25000dh</p>
+                                            </div>
+                                        </div> 
+                                    </label>
+                                </div>  
+                                <div class="col-11">
+                                    <input type="submit" value=" Commander ! اطلب الآن " class="cart-btn w-100">
+                                </div>                
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
-		</div>
-	</div>
-	<!-- end more products -->
+        </div>
+        <!-- end single product -->
+
+        <!-- more products -->
+        <div class="more-products mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 offset-lg-2 text-center">
+                        <div class="section-title mb-1">	
+                            <h3><span class="second-color-text">Related</span> Products</h3>
+                            <p class="w-100">You May Also Like</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-section">
+                    <div class="container">
+                        <div class="row justify-content-between">
+                            <!-- Start Column 2 -->
+                            <div class="col-12 col-md-4 col-lg-3 mb-5 me-3 mb-md-0">
+                                <a class="product-item" href="Insta360 ONE X2.html">
+                                    <img src="images/product-2.png" class="img-fluid product-thumbnail">
+                                    <h3 class="product-title">Insta360 ONE X2</h3>
+                                    <strong class="product-price">$429.99</strong>
+
+                                    <span class="icon-cross">
+                                        <img src="images/cross.svg" class="img-fluid">
+                                    </span>
+                                </a>
+                            </div> 
+                            <!-- End Column 2 -->
+
+                            <!-- Start Column 3 -->
+                            <div class="col-12 col-md-4 col-lg-3 mb-5 me-3 mb-md-0">
+                                <a class="product-item" href="Fujifilm Instax Mini 11.html">
+                                    <img src="images/product-3.png" class="img-fluid product-thumbnail">
+                                    <h3 class="product-title">Fujifilm Instax Mini 11</h3>
+                                    <strong class="product-price">$80.00</strong>
+
+                                    <span class="icon-cross">
+                                        <img src="images/cross.svg" class="img-fluid">
+                                    </span>
+                                </a>
+                            </div> 
+                            <!-- End Column 3 -->
+
+                            <!-- Start Column 4 -->
+                            <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
+                                <a class="product-item" href="GoPro HERO9 Black.html">
+                                    <img src="images/product-4.png" class="img-fluid product-thumbnail">
+                                    <h3 class="product-title">GoPro HERO9 Black</h3>
+                                    <strong class="product-price">$248.95</strong>
+
+                                    <span class="icon-cross">
+                                        <img src="images/cross.svg" class="img-fluid">
+                                    </span>
+                                </a>
+                            </div> 
+                            <!-- End Column 4 -->
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end more products -->
+    </div>
 
     <!-- Start Footer Section -->
     <footer class="footer-section">
@@ -210,3 +255,4 @@
     <script src="js/custom.js"></script>
 </body>
 </html>
+
