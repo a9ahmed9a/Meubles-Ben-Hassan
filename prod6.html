@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -14,14 +13,14 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 	<link href="css/tiny-slider.css" rel="stylesheet">
 	<link href="css/style.css?v=1.8" rel="stylesheet">
-	<title>Insta360 ONE X2 Ichhari-Ecom</title>
+	<title>Étagère murale en bois rustique</title>
 </head>
 <body>
     <!-- Start Header/Navigation -->
     <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
-
         <div class="container">
-            <a class="navbar-brand" href="index.html">Ichhari-Ecom<span>.</span></a>
+            <!-- <a class="navbar-brand" href="index.html">Ichhari-Ecom<span>.</span></a> -->
+            <a class="navbar-brand" href="index.html"><img src="./images/logo1.png" alt="" class="image-logo"> Meuble ben hassan</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -65,28 +64,28 @@
                 <div class="row align-items-center">
                     <div class="col-md-5">
                         <div class="single-product-img">
-                            <img src="images/product-2.png" alt="Insta360 ONE X2" class="img-fluid">
+                            <img src="images/prod6.jpg" alt="etagere murale decorative" class="img-fluid">
                         </div>
                     </div>
 
                     <div class="col-md-7 mt-4">
                         <div class="single-product-content">
-                            <h3>Insta360 ONE X2</h3>
-                            <p>Dive into the world of immersive storytelling with the Insta360 ONE X2. This compact yet powerful camera lets you capture stunning 5.7K 360° footage with ease. Whether you're an adventure enthusiast or a content creator, the ONE X2 offers unmatched versatility and creativity. From epic landscapes to dynamic action shots, unleash your imagination and redefine the way you capture memories.</p>
+                            <h3>Étagère murale en bois rustique</h3>
+                            <p>Étagère murale en bois rustique, boîte de rangement décorative, étagère nordique, cuisine, HOT1, décoration d'intérieur</p>
                         </div>
                     </div>
 
                     <div class="col-md-12 mt-4 single-product-form">
-                        <form action="command.php" methode="post" class="ms-3">
+                        <form action="server/command.php" methode="get" class="ms-3">
                             <div class="row align-items-center justify-content-center">
                                 <div class="col-lg-5 p-0">
-                                    <input type="text" id="Prodname" hidden value="Insta360 ONE X2" class="w-100">
+                                    <input type="text" id="Prodname" name="prodName" hidden value="product_5" class="w-100">
                                     <div class="">
                                         <div class="d-flex">
                                             <div class="w-10 icon d-flex align-items-center">
                                                 <img src="icons/person-button-svgrepo-com.svg" alt="">
                                             </div>
-                                            <input type="text" id="name" placeholder="Nom | الإسم الكامل" class="w-100">
+                                            <input type="text" id="name" name="name" placeholder="Nom | الإسم الكامل" class="w-100">
                                         </div>
                                     </div>     
                                     <div class="">
@@ -94,7 +93,7 @@
                                             <div class="w-10 icon d-flex align-items-center">
                                                 <img src="icons/telephone-round-svgrepo-com.svg" alt="">
                                             </div>
-                                            <input type="text" placeholder="Téléphone | رقم الهاتف" id="tele" class="w-100">
+                                            <input type="text" name="tele" placeholder="Téléphone | رقم الهاتف" id="tele" class="w-100">
                                         </div>
                                     </div>     
                                     <div class="">
@@ -102,41 +101,41 @@
                                             <div class="w-10 icon d-flex align-items-center">
                                                 <img src="icons/map-point-wave-svgrepo-com.svg" alt="">
                                             </div>
-                                            <input type="text" placeholder="Ville | المدينة" id="adrss" class="w-100">
+                                            <input type="text" name="ville" placeholder="Ville | المدينة" id="adrss" class="w-100">
                                         </div>
                                     </div>     
                                 </div>  
                                 <div class="col-lg-1"></div>       
                                 <div class="col-lg-6 p-0 radio-form">
-                                    <input type="radio" id="image1" hidden name="image" selected value="image1" checked>
+                                    <input type="radio" id="image1" hidden name="prodvar" value="var1" checked>
                                     <label for="image1" class="d-flex w-auto"> 
-                                        <img src="images/product-2.png" alt="Image 1">
+                                        <img src="images/prod6.jpg" alt="Image 1">
                                         <div class="radio-form-text d-flex align-items-center w-100">
-                                            <p class="w-auto">1 camera</p>
-                                            <p class="price text-end">1000dh</p>
+                                            <p class="w-auto">1 Etagrie</p>
+                                            <p class="price text-end">500dh</p>
                                         </div> 
                                     </label>
                 
-                                    <input type="radio" id="image2" hidden name="image" value="image1">
+                                    <input type="radio" id="image2" hidden name="prodvar" value="var2">
                                     <label for="image2" class="d-flex w-auto">
-                                        <img src="images/product-2.png" alt="Image 1">
+                                        <img src="images/prod6.jpg" alt="Image 1">
                                         <div class="radio-form-text d-flex align-items-center w-100">
-                                            <p class="w-auto">2 camera</p>
+                                            <p class="w-auto">2 Etagrie</p>
                                             <div class="price text-end">
-                                                <p class="w-100 price text-end"><del>20000dh</del></p>
-                                                <p class="w-100 price text-end">18000dh</p>
+                                                <p class="w-100 price text-end"><del>1000dh</del></p>
+                                                <p class="w-100 price text-end">750dh</p>
                                             </div>
                                         </div> 
                                     </label>
 
-                                    <input type="radio" id="image3" hidden name="image" value="image1">
+                                    <input type="radio" id="image3" hidden name="prodvar" value="var3">
                                     <label for="image3" class="d-flex w-auto">
-                                        <img src="images/product-2.png" alt="Image 1">
+                                        <img src="images/prod6.jpg" alt="Image 1">
                                         <div class="radio-form-text d-flex align-items-center w-100">
-                                            <p class="w-auto">3 camera</p>
+                                            <p class="w-auto">3 Etagrie</p>
                                             <div class="price text-end">
-                                                <p class="w-100 price text-end"><del>30000dh</del></p>
-                                                <p class="w-100 price text-end">25000dh</p>
+                                                <p class="w-100 price text-end"><del>1500dh</del></p>
+                                                <p class="w-100 price text-end">1300dh</p>
                                             </div>
                                         </div> 
                                     </label>
@@ -169,10 +168,10 @@
                         <div class="row justify-content-between">
                             <!-- Start Column 2 -->
                             <div class="col-12 col-md-4 col-lg-3 mb-5 me-3 mb-md-0">
-                                <a class="product-item" href="Insta360 ONE X2.html">
-                                    <img src="images/product-2.png" class="img-fluid product-thumbnail">
-                                    <h3 class="product-title">Insta360 ONE X2</h3>
-                                    <strong class="product-price">$429.99</strong>
+                                <a class="product-item" href="prod.html">
+                                    <img src="images/prod1.jpg" class="img-fluid product-thumbnail">
+                                    <h3 class="product-title">Etagère Décorative</h3>
+                                    <strong class="product-price">750dh</strong>
 
                                     <span class="icon-cross">
                                         <img src="images/cross.svg" class="img-fluid">
@@ -183,10 +182,10 @@
 
                             <!-- Start Column 3 -->
                             <div class="col-12 col-md-4 col-lg-3 mb-5 me-3 mb-md-0">
-                                <a class="product-item" href="Fujifilm Instax Mini 11.html">
-                                    <img src="images/product-3.png" class="img-fluid product-thumbnail">
-                                    <h3 class="product-title">Fujifilm Instax Mini 11</h3>
-                                    <strong class="product-price">$80.00</strong>
+                                <a class="product-item" href="prod2.html">
+                                    <img src="images/prod2.jpg" class="img-fluid product-thumbnail">
+                                    <h3 class="product-title">Etagère Décorative</h3>
+                                    <strong class="product-price">750dh</strong>
 
                                     <span class="icon-cross">
                                         <img src="images/cross.svg" class="img-fluid">
@@ -197,10 +196,10 @@
 
                             <!-- Start Column 4 -->
                             <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-                                <a class="product-item" href="GoPro HERO9 Black.html">
-                                    <img src="images/product-4.png" class="img-fluid product-thumbnail">
-                                    <h3 class="product-title">GoPro HERO9 Black</h3>
-                                    <strong class="product-price">$248.95</strong>
+                                <a class="product-item" href="prod4.html">
+                                    <img src="images/prod4.jpg" class="img-fluid product-thumbnail">
+                                    <h3 class="product-title">Étagère murale décorative</h3>
+                                    <strong class="product-price">250dh</strong>
 
                                     <span class="icon-cross">
                                         <img src="images/cross.svg" class="img-fluid">

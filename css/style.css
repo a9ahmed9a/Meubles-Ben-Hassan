@@ -1,6 +1,6 @@
 :root{
-  --mainColor : #9a5ee4;
-  --mainColorVar : #9a5ee462;
+  --mainColor : #000;
+  --mainColorVar : #00000062;
   --secondColr : #eda320;
   --secondColrvar : #eda32062;
   --secondaryBtnHover : rgb(217, 164, 30);
@@ -34,6 +34,14 @@
 body {
   overflow-x: hidden;
   position: relative; 
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+RO:wght@100..400&family=Playwrite+VN:wght@100..400&display=swap');
+.benhassan {
+  font-family: "Playwrite RO", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 body {
@@ -142,10 +150,6 @@ a.more {
     opacity: 1; 
   }
 
-  .custom-navbar .custom-navbar-nav li.active a:before {
-    width: calc(100% - 16px); 
-  }
-
   .custom-navbar .custom-navbar-cta {
     margin-left: 0 !important;
     -webkit-box-orient: horizontal;
@@ -206,7 +210,7 @@ a.more {
   z-index: 4; 
 }
 
-.hero h1 {
+.hero h1, h2 {
   font-weight: 700;
   color: var(--lightTextColor);
   margin-bottom: 30px; 
@@ -216,6 +220,10 @@ a.more {
   .hero h1 {
     font-size: 54px; 
   } 
+
+  .hero h2 {
+    font-size: 40px;
+  }
 }
 
 .hero p {
@@ -579,7 +587,8 @@ a.more {
 .footer-section {
   margin-top: 5rem;
   padding: 80px 0 3rem;
-  background: var(--lightTextColor); 
+  background: #012E45; 
+  color: var(--lightTextColor);
 }
 
 .footer-section .relative {
@@ -1000,3 +1009,6 @@ p.single-product-pricing span {
   margin-bottom: 5px
 }
 
+.image-logo{
+  height: 50px;
+}
