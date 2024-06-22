@@ -41,7 +41,9 @@ onAuthStateChanged(auth, (user) => {
     }
 });
 
-const addItemToCart = async (itemName, quantity) => {
+const addItemToCart = async (itemName, quantity, image, name, price) => {
+    if(quantity = NaN)
+        quantity = 1;
     const user = auth.currentUser;
     if (user) {
         const userId = user.uid;
@@ -56,8 +58,11 @@ const addItemToCart = async (itemName, quantity) => {
 
             // Update cart items
             cartItems[itemName] = {
-                name: itemName,
-                quantity: quantity
+                id: itemName,
+                quantity: quantity,
+                image: image,
+                name: name,
+                price: price
             };
 
             // Save the updated cart

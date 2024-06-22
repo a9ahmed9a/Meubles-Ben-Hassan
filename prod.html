@@ -91,6 +91,9 @@
                             <div class="row align-items-center justify-content-center">
                                 <div class="col-lg-6 col-10 p-0">
                                     <input type="text" id="Prodname" name="prodName" hidden value="product_1" class="w-100">
+                                    <input type="text" id="imageProd" hidden value="images/prod1.jpg" class="w-100">
+                                    <input type="text" id="prodnm" hidden value="رف زينة" class="w-100">
+                                    <input type="text" id="prodPrice" hidden value="750" class="w-100">
                                     <div class="">
                                         <div class="d-flex">
                                             <div class="w-10 icon d-flex align-items-center">
@@ -216,7 +219,10 @@
             event.preventDefault();
             const itemName = document.getElementById('Prodname').value;
             const quantity = document.getElementById('qte').value;
-            addItemToCart(itemName, parseInt(quantity));
+            const image = document.getElementById('imageProd').value;
+            const name = document.getElementById('prodnm').value;
+            const price = document.getElementById('prodPrice').value;
+            addItemToCart(itemName, parseInt(quantity), image, name, parseFloat(price));
         });
     </script>
 </body>
