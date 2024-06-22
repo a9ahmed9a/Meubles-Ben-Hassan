@@ -222,8 +222,12 @@
             const image = document.getElementById('imageProd').value;
             const name = document.getElementById('prodnm').value;
             const price = document.getElementById('prodPrice').value;
-            if(isNaN(quantity))
+
+            if(isNaN(parseInt(quantity))){
                 quantity = 1;
+            }
+
+            console.log(quantity);
             addItemToCart(itemName, parseInt(quantity), image, name, parseFloat(price));
         });
     </script>
