@@ -222,7 +222,7 @@
             const image = document.getElementById('imageProd').value;
             const name = document.getElementById('prodnm').value;
             const price = document.getElementById('prodPrice').value;
-            if(quantity.isNaN())
+            if(isNaN(quantity))
                 quantity = 1;
             addItemToCart(itemName, parseInt(quantity), image, name, parseFloat(price));
         });
