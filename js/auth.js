@@ -10,7 +10,8 @@ const firebaseConfig = {
     projectId: "meublebenhassan",	  
     storageBucket: "meublebenhassan.appspot.com",	  
     messagingSenderId: "484610973479",	  
-    appId: "1:484610973479:web:0d333ea7b55589643a9302"
+    appId: "1:484610973479:web:0d333ea7b55589643a9302",
+    databaseURL: "https://meublebenhassan-default-rtdb.europe-west1.firebasedatabase.app" // Ensure this URL is correct
 };
 
 // Initialize Firebase
