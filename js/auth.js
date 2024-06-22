@@ -1,7 +1,7 @@
 // auth.js
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";	 
 import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-import { getDatabase, ref, set, get, child, update } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+import { getFirestore, doc, setDoc, getDoc, updateDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 // Your Firebase configuration
 const firebaseConfig = {	  
@@ -40,35 +40,31 @@ onAuthStateChanged(auth, (user) => {
     }
 });
 
-const addItemToCart = (itemName, quantity) => {
+const addItemToCart = async (itemName, quantity) => {
     const user = auth.currentUser;
     if (user) {
         const userId = user.uid;
-        const cartRef = ref(database, 'carts/' + userId);
+        const cartDocRef = doc(firestore, 'carts', userId);
 
-        // Retrieve current cart items
-        get(cartRef).then((snapshot) => {
+        try {
+            const cartDoc = await getDoc(cartDocRef);
             let cartItems = {};
-            if (snapshot.exists()) {
-                cartItems = snapshot.val();
+            if (cartDoc.exists()) {
+                cartItems = cartDoc.data();
             }
-            
+
             // Update cart items
-            const newItemKey = itemName; // Use itemName as the key
-            cartItems[newItemKey] = {
+            cartItems[itemName] = {
                 name: itemName,
                 quantity: quantity
             };
 
             // Save the updated cart
-            set(cartRef, cartItems).then(() => {
-                console.log("Item added to cart:", cartItems[newItemKey]);
-            }).catch((error) => {
-                console.error("Error adding item to cart:", error);
-            });
-        }).catch((error) => {
-            console.error("Error retrieving cart:", error);
-        });
+            await setDoc(cartDocRef, cartItems);
+            console.log("Item added to cart:", cartItems[itemName]);
+        } catch (error) {
+            console.error("Error adding item to cart:", error);
+        }
     } else {
         console.error("User is not authenticated");
     }
