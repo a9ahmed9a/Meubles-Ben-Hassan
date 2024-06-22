@@ -14,6 +14,10 @@
   --productionBackColor : #dce5e4;
 }
 
+html{
+  direction: rtl;
+}
+
 @font-face {
   font-family: 'gothic';
   src: url('../fonts/HandelGo.ttf') format('truetype'),
@@ -34,6 +38,14 @@
 body {
   overflow-x: hidden;
   position: relative; 
+}
+
+.w-105{
+  height: 100px;
+}
+
+.btn-2{
+  padding: 2px 10px !important;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+RO:wght@100..400&family=Playwrite+VN:wght@100..400&display=swap');
@@ -608,7 +620,6 @@ a.more {
 }
 
 .footer-section .subscription-form {
-  margin-bottom: 40px;
   position: relative;
   z-index: 2;
   margin-top: 100px; 
@@ -625,7 +636,7 @@ a.more {
   position: absolute;
   top: -250px;
   z-index: 1;
-  right: 0; 
+  left: 0; 
 }
 
 .footer-section .sofa-img img {
@@ -730,13 +741,8 @@ textarea {
   color: var(--mainColor); 
 }
 
-.thankyou-icon:before {
-  position: absolute;
-  content: "";
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: rgba(59, 93, 80, 0.2); 
+.z-ind-top{
+  z-index: 2;
 }
 
 .service .service-icon {
@@ -912,6 +918,7 @@ p.single-product-pricing span {
 
 .navbar .custom-social li {
   margin: 2px;
+  margin-bottom: 0;
   display: inline-block; 
 }
 
@@ -1011,4 +1018,18 @@ p.single-product-pricing span {
 
 .image-logo{
   height: 50px;
+}
+
+table {
+  margin: 0 auto; /* Center the table horizontally */
+  border-collapse: collapse; /* Remove space between borders */
+  width: 80%; /* Optional, set the width of the table */
+}
+th, td {
+  text-align: center; /* Center text horizontally */
+  vertical-align: middle; /* Center text vertically */
+  padding: 10px; /* Optional, add padding to cells */
+}
+th {
+  background-color: #f4f4f4; /* Optional, add background color to header */
 }

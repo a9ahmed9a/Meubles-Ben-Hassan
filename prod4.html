@@ -14,41 +14,48 @@
 	<link href="css/tiny-slider.css" rel="stylesheet">
 	<link href="css/style.css?v=1.8" rel="stylesheet">
 	<title>Étagère murale décorative</title>
+
+    <script type="module" src="auth.js"></script>
 </head>
 <body>
     <!-- Start Header/Navigation -->
     <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
         <div class="container">
-            <!-- <a class="navbar-brand" href="index.html">Ichhari-Ecom<span>.</span></a> -->
-            <a class="navbar-brand" href="index.html"><img src="./images/logo1.png" alt="" class="image-logo"> Meuble ben hassan</a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <a class="navbar-brand benhassan" href="index.html"><img src="./images/logo1.png" alt="" class="image-logo"></a>
             
             <div class="collapse navbar-collapse" id="navbarsFurni">
                 <ul class="custom-navbar-nav navbar-nav ms-auto me-auto mb-2 mb-md-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="index.html">الصفحة الرئيسية</a>
                     </li>
-                    <li><a class="nav-link" href="shop.html">Shop</a></li>
-                    <li><a class="nav-link" href="contact.html">Contact us</a></li>
+                    <li>
+                        <a class="nav-link" href="shop.html">المتجر</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="contact.html">اتصل بنا</a>
+                    </li>
                 </ul>
             </div>
-        </div>
-            
-        <div class="row d-lg-block d-none me-auto">
-            <div class="">
-                <div class="subscription-form">
-                    <ul class="list-unstyled custom-social">
-                        <li><a href="#"><span class="fa fa-brands fa-facebook-f"></span></a></li>
-                        <li><a href="#"><span class="fa fa-brands fa-instagram"></span></a></li>
-                        <li><a href="#"><span class="fa fa-brands fa-linkedin"></span></a></li>
-                    </ul>
+
+            <div class="d-flex justify-content-end">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="row me-auto">
+                    <div class="">
+                        <div class="subscription-form">
+                            <ul class="list-unstyled custom-social mb-0 pe-0 d-flex align-items-center">
+                                <li class="d-lg-block d-none"><a href="https://web.facebook.com/p/Meubles-ben-hassan-100076414397286/?_rdc=1&_rdr"><span class="fa fa-brands fa-facebook-f"></span></a></li>
+                                <li class="d-lg-block d-none"><a href="https://www.instagram.com/meubles.benhassan/"><span class="fa fa-brands fa-instagram"></span></a></li>
+                                <li class="ms-3"><a href="cart.html"><img src="images/cart.svg"></a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-
+            
+        </div>	
     </nav>
     <!-- End Header/Navigation -->
 
@@ -230,7 +237,7 @@
     </div>
 
     <!-- Start Footer Section -->
-    <footer class="footer-section">
+    <footer class="footer-section test">
         <div class="container relative">
 
             <div class="sofa-img">
@@ -241,10 +248,8 @@
                 <div class="col-lg-8">
                     <div class="subscription-form">
                         <ul class="list-unstyled custom-social">
-                            <li><a href="#"><span class="fa fa-brands fa-facebook-f"></span></a></li>
-                            <li><a href="#"><span class="fa fa-brands fa-twitter"></span></a></li>
-                            <li><a href="#"><span class="fa fa-brands fa-instagram"></span></a></li>
-                            <li><a href="#"><span class="fa fa-brands fa-linkedin"></span></a></li>
+                            <li><a href="https://web.facebook.com/p/Meubles-ben-hassan-100076414397286/?_rdc=1&_rdr"><span class="fa fa-brands fa-facebook-f"></span></a></li>
+                            <li><a href="https://www.instagram.com/meubles.benhassan/"><span class="fa fa-brands fa-instagram"></span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -252,8 +257,8 @@
 
             <div class="border-top copyright">
                 <div class="row pt-4">
-                    <div class="col-lg-6">
-                        <p class="mb-2 text-center text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://ichhari.com/">Ichhari media</a></p>
+                    <div class="col-lg-6 d-flex">
+                        <p class="mb-2 text-start text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love</p>
                     </div>
                 </div>
             </div>

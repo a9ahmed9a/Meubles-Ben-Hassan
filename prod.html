@@ -14,47 +14,54 @@
 	<link href="css/tiny-slider.css" rel="stylesheet">
 	<link href="css/style.css?v=1.8" rel="stylesheet">
 	<title>Etagère Décorative</title>
+
+    <script type="module" src="auth.js"></script>
 </head>
 <body>
     <!-- Start Header/Navigation -->
     <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
         <div class="container">
-            <!-- <a class="navbar-brand" href="index.html">Ichhari-Ecom<span>.</span></a> -->
-            <a class="navbar-brand" href="index.html"><img src="./images/logo1.png" alt="" class="image-logo"> Meuble ben hassan</a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <a class="navbar-brand benhassan" href="index.html"><img src="./images/logo1.png" alt="" class="image-logo"></a>
             
             <div class="collapse navbar-collapse" id="navbarsFurni">
                 <ul class="custom-navbar-nav navbar-nav ms-auto me-auto mb-2 mb-md-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="index.html">الصفحة الرئيسية</a>
                     </li>
-                    <li><a class="nav-link" href="shop.html">Shop</a></li>
-                    <li><a class="nav-link" href="contact.html">Contact us</a></li>
+                    <li>
+                        <a class="nav-link" href="shop.html">المتجر</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="contact.html">اتصل بنا</a>
+                    </li>
                 </ul>
             </div>
-        </div>
-            
-        <div class="row d-lg-block d-none me-auto">
-            <div class="">
-                <div class="subscription-form">
-                    <ul class="list-unstyled custom-social">
-                        <li><a href="#"><span class="fa fa-brands fa-facebook-f"></span></a></li>
-                        <li><a href="#"><span class="fa fa-brands fa-instagram"></span></a></li>
-                        <li><a href="#"><span class="fa fa-brands fa-linkedin"></span></a></li>
-                    </ul>
+
+            <div class="d-flex justify-content-end">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="row me-auto">
+                    <div class="">
+                        <div class="subscription-form">
+                            <ul class="list-unstyled custom-social mb-0 pe-0 d-flex align-items-center">
+                                <li class="d-lg-block d-none"><a href="https://web.facebook.com/p/Meubles-ben-hassan-100076414397286/?_rdc=1&_rdr"><span class="fa fa-brands fa-facebook-f"></span></a></li>
+                                <li class="d-lg-block d-none"><a href="https://www.instagram.com/meubles.benhassan/"><span class="fa fa-brands fa-instagram"></span></a></li>
+                                <li class="ms-3"><a href="cart.html"><img src="images/cart.svg"></a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-
+            
+        </div>	
     </nav>
     <!-- End Header/Navigation -->
 
-    <div class="free-shipping d-flex align-items-center justify-content-center">
+    <div class="free-shipping d-flex align-items-center z-ind-top justify-content-center" style="direction: ltr;">
         <img src="icons/truck-svgrepo-com.svg" alt="">
-        <p>FREE shiping</p>
+        <p>الشحن مجاني</p>
     </div>
 
 	<div class="container">
@@ -70,19 +77,19 @@
 
                     <div class="col-md-7 mt-4">
                         <div class="single-product-content">
-                            <h3>Etagère Décorative</h3>
-                            <p>Etagère forme Cactus  fabriqué avec bois MDF 
+                            <h3>رف زينة</h3>
+                            <p>رف على شكل صبار مصنوع من خشب 
                                 <br><br>
-                                Dimensions : 170 cm / 40 cm
+                                الأبعاد: 170 سم / 40 سم
                                 <br><br>
-                                Disponible en 3 couleurs : Blanc , Noir , Chaine </p>
+                                متوفر بثلاثة ألوان: أبيض، أسود، شين (لون الخشب) </p>
                         </div>
                     </div>
 
-                    <div class="col-md-12 mt-4 single-product-form">
+                    <div class="col-md-12 mt-4 single-product-form" style="direction: ltr;">
                         <form action="thankyou.html" methode="get" class="ms-3">
                             <div class="row align-items-center justify-content-center">
-                                <div class="col-lg-5 p-0">
+                                <div class="col-lg-10 p-0">
                                     <input type="text" id="Prodname" name="prodName" hidden value="product_1" class="w-100">
                                     <div class="">
                                         <div class="d-flex">
@@ -109,41 +116,6 @@
                                         </div>
                                     </div>     
                                 </div>  
-                                <div class="col-lg-1"></div>       
-                                <div class="col-lg-6 p-0 radio-form">
-                                    <input type="radio" id="image1" hidden name="prodvar" value="var1" checked>
-                                    <label for="image1" class="d-flex w-auto"> 
-                                        <img src="images/prod1.jpg" alt="Image 1">
-                                        <div class="radio-form-text d-flex align-items-center w-100">
-                                            <p class="w-auto">1 Etagrie</p>
-                                            <p class="price text-end">749dh</p>
-                                        </div> 
-                                    </label>
-                
-                                    <input type="radio" id="image2" hidden name="prodvar" value="var2">
-                                    <label for="image2" class="d-flex w-auto">
-                                        <img src="images/prod1.jpg" alt="Image 1">
-                                        <div class="radio-form-text d-flex align-items-center w-100">
-                                            <p class="w-auto">2 Etagrie</p>
-                                            <div class="price text-end">
-                                                <p class="w-100 price text-end"><del>1500dh</del></p>
-                                                <p class="w-100 price text-end">1400dh</p>
-                                            </div>
-                                        </div> 
-                                    </label>
-
-                                    <input type="radio" id="image3" hidden name="prodvar" value="var3">
-                                    <label for="image3" class="d-flex w-auto">
-                                        <img src="images/prod1.jpg" alt="Image 1">
-                                        <div class="radio-form-text d-flex align-items-center w-100">
-                                            <p class="w-auto">3 Etagrie</p>
-                                            <div class="price text-end">
-                                                <p class="w-100 price text-end"><del>2250dh</del></p>
-                                                <p class="w-100 price text-end">2000dh</p>
-                                            </div>
-                                        </div> 
-                                    </label>
-                                </div>  
                                 <div class="col-11">
                                     <input type="submit" value=" Commander ! اطلب الآن " class="cart-btn w-100">
                                 </div>                
@@ -158,11 +130,11 @@
         <!-- more products -->
         <div class="more-products mt-5">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 offset-lg-2 text-center">
+                <div class="row d-flex justify-content-center ">
+                    <div class="col-lg-8 text-center">
                         <div class="section-title mb-1">	
-                            <h3><span class="second-color-text">Related</span> Products</h3>
-                            <p class="w-100">You May Also Like</p>
+                            <h3><span class="second-color-text">المنتجات</span> ذات الصلة</h3>
+                            <p class="w-100">قد يعجبك أيضًا                            </p>
                         </div>
                     </div>
                 </div>
@@ -221,7 +193,7 @@
     </div>
 
     <!-- Start Footer Section -->
-    <footer class="footer-section">
+    <footer class="footer-section test">
         <div class="container relative">
 
             <div class="sofa-img">
@@ -232,10 +204,8 @@
                 <div class="col-lg-8">
                     <div class="subscription-form">
                         <ul class="list-unstyled custom-social">
-                            <li><a href="#"><span class="fa fa-brands fa-facebook-f"></span></a></li>
-                            <li><a href="#"><span class="fa fa-brands fa-twitter"></span></a></li>
-                            <li><a href="#"><span class="fa fa-brands fa-instagram"></span></a></li>
-                            <li><a href="#"><span class="fa fa-brands fa-linkedin"></span></a></li>
+                            <li><a href="https://web.facebook.com/p/Meubles-ben-hassan-100076414397286/?_rdc=1&_rdr"><span class="fa fa-brands fa-facebook-f"></span></a></li>
+                            <li><a href="https://www.instagram.com/meubles.benhassan/"><span class="fa fa-brands fa-instagram"></span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -243,8 +213,8 @@
 
             <div class="border-top copyright">
                 <div class="row pt-4">
-                    <div class="col-lg-6">
-                        <p class="mb-2 text-center text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://ichhari.com/">Ichhari media</a></p>
+                    <div class="col-lg-6 d-flex">
+                        <p class="mb-2 text-start text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love</p>
                     </div>
                 </div>
             </div>
