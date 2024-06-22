@@ -218,10 +218,12 @@
         document.getElementById('prodForm').addEventListener('submit', function(event) {
             event.preventDefault();
             const itemName = document.getElementById('Prodname').value;
-            const quantity = document.getElementById('qte').value;
+            var quantity = document.getElementById('qte').value;
             const image = document.getElementById('imageProd').value;
             const name = document.getElementById('prodnm').value;
             const price = document.getElementById('prodPrice').value;
+            if(quantity == NaN)
+                quantity = 1;
             addItemToCart(itemName, parseInt(quantity), image, name, parseFloat(price));
         });
     </script>
