@@ -41,9 +41,7 @@ onAuthStateChanged(auth, (user) => {
     }
 });
 
-const addItemToCart = async (itemName, quantity, image, name, price) => {
-    if(quantity == NaN)
-        quantity = 1;
+const addItemToCart = async (itemName, quantity = 1, image, name, price) => {
     const user = auth.currentUser;
     if (user) {
         const userId = user.uid;
