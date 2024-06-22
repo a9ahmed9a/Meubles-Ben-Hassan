@@ -15,7 +15,7 @@
 	<link href="css/style.css?v=1.8" rel="stylesheet">
 	<title>Etagère Décorative</title>
 
-    <script type="module" src="auth.js"></script>
+    <script type="module" src="js/auth.js"></script>
 </head>
 <body>
     <!-- Start Header/Navigation -->
@@ -87,37 +87,21 @@
                     </div>
 
                     <div class="col-md-12 mt-4 single-product-form" style="direction: ltr;">
-                        <form action="thankyou.html" methode="get" class="ms-3">
+                        <form action="thankyou.html" methode="get" class="ms-3" id="prodForm">
                             <div class="row align-items-center justify-content-center">
-                                <div class="col-lg-10 p-0">
+                                <div class="col-lg-6 col-10 p-0">
                                     <input type="text" id="Prodname" name="prodName" hidden value="product_1" class="w-100">
                                     <div class="">
                                         <div class="d-flex">
                                             <div class="w-10 icon d-flex align-items-center">
-                                                <img src="icons/person-button-svgrepo-com.svg" alt="">
+                                                <img src="icons/number-svgrepo-com.svg" alt="">
                                             </div>
-                                            <input type="text" id="name" name="name" placeholder="Nom | الإسم الكامل" class="w-100">
+                                            <input type="number" id="qte" name="qte" placeholder="Quantity | الكمية" class="w-100">
                                         </div>
-                                    </div>     
-                                    <div class="">
-                                        <div class="d-flex">
-                                            <div class="w-10 icon d-flex align-items-center">
-                                                <img src="icons/telephone-round-svgrepo-com.svg" alt="">
-                                            </div>
-                                            <input type="text" name="tele" placeholder="Téléphone | رقم الهاتف" id="tele" class="w-100">
-                                        </div>
-                                    </div>     
-                                    <div class="">
-                                        <div class="d-flex">
-                                            <div class="w-10 icon d-flex align-items-center">
-                                                <img src="icons/map-point-wave-svgrepo-com.svg" alt="">
-                                            </div>
-                                            <input type="text" name="ville" placeholder="Ville | المدينة" id="adrss" class="w-100">
-                                        </div>
-                                    </div>     
+                                    </div>      
                                 </div>  
-                                <div class="col-11">
-                                    <input type="submit" value=" Commander ! اطلب الآن " class="cart-btn w-100">
+                                <div class="col-11 col-lg-6">
+                                    <button type="submit"  class="cart-btn w-100">أضف إلى السلة</button>
                                 </div>                
                             </div>
                         </form>
@@ -226,6 +210,15 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/tiny-slider.js"></script>
     <script src="js/custom.js"></script>
+
+    <script>
+        document.getElementById('prodForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const itemName = document.getElementById('Prodname').value;
+            const quantity = document.getElementById('qte').value;
+            addItemToCart(itemName, parseInt(quantity));
+        });
+    </script>
 </body>
 </html>
 
