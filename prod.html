@@ -78,6 +78,7 @@
                     <div class="col-md-7 mt-4">
                         <div class="single-product-content">
                             <h3>رف زينة</h3>
+                            <strong class="product-price">750 درهم</strong>
                             <p>رف على شكل صبار مصنوع من خشب 
                                 <br><br>
                                 الأبعاد: 170 سم / 40 سم
@@ -87,7 +88,7 @@
                     </div>
 
                     <div class="col-md-12 mt-4 single-product-form" style="direction: ltr;">
-                        <form action="thankyou.html" methode="get" class="ms-3" id="prodForm">
+                        <form action="cart.html" methode="get" class="ms-3" id="prodForm">
                             <div class="row align-items-center justify-content-center">
                                 <div class="col-lg-6 col-10 p-0">
                                     <input type="text" id="Prodname" name="prodName" hidden value="product_1" class="w-100">
@@ -96,10 +97,10 @@
                                     <input type="text" id="prodPrice" hidden value="750" class="w-100">
                                     <div class="">
                                         <div class="d-flex">
-                                            <div class="w-10 icon d-flex align-items-center">
+                                            <div class="mb-0 icon d-flex align-items-center">
                                                 <img src="icons/number-svgrepo-com.svg" alt="">
                                             </div>
-                                            <input type="number" id="qte" name="qte" placeholder="Quantity | الكمية" class="w-100">
+                                            <input type="number" id="qte" name="qte" placeholder="Quantity | الكمية" class="w-100 mb-0">
                                         </div>
                                     </div>      
                                 </div>  
@@ -133,8 +134,8 @@
                             <div class="col-12 col-md-4 col-lg-3 mb-5 me-3 mb-md-0">
                                 <a class="product-item" href="prod2.html">
                                     <img src="images/prod2.jpg" class="img-fluid product-thumbnail">
-                                    <h3 class="product-title">Etagère Décorative</h3>
-                                    <strong class="product-price">750dh</strong>
+                                    <h3 class="product-title">رف زينة</h3>
+                                    <strong class="product-price">750 درهم</strong>
 
                                     <span class="icon-cross">
                                         <img src="images/cross.svg" class="img-fluid">
@@ -147,8 +148,8 @@
                             <div class="col-12 col-md-4 col-lg-3 mb-5 me-3 mb-md-0">
                                 <a class="product-item" href="prod3.html">
                                     <img src="images/prod3.jpg" class="img-fluid product-thumbnail">
-                                    <h3 class="product-title">Etagere Murale De Decoration Noire</h3>
-                                    <strong class="product-price">1000 Dh</strong>
+                                    <h3 class="product-title">رف حائط زينة أسود</h3>
+                                    <strong class="product-price">1000 درهم</strong>
 
                                     <span class="icon-cross">
                                         <img src="images/cross.svg" class="img-fluid">
@@ -228,6 +229,8 @@
             }
 
             addItemToCart(itemName, parseInt(quantity), image, name, parseFloat(price));
+
+            window.location.href = './cart.html';
         });
     </script>
 </body>
