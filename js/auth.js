@@ -198,4 +198,6 @@ async function fetchAndDisplayData() {
     }
   }
 
+
+window.fetchAndDisplayData = fetchAndDisplayData;
 window.addItemToCart = addItemToCart;
