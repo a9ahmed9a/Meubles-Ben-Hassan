@@ -16,6 +16,7 @@
 
 html{
   direction: rtl;
+  overflow-x: hidden;
 }
 
 @font-face {
@@ -45,7 +46,7 @@ body {
 }
 
 .btn-2{
-  padding: 2px 10px !important;
+  padding: 0px 5px !important;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+RO:wght@100..400&family=Playwrite+VN:wght@100..400&display=swap');

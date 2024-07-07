@@ -62,7 +62,41 @@
 		<!-- End Header/Navigation -->
 		<div class="untree_co-section before-footer-section">
             <div class="container">
-              <div class="row mb-5">
+				<div class="row d-md-none mb-5">
+					<form method="post" class="col-md-12">
+						<div class="row justify-content-center">
+							<div class="col-2 p-0">
+								<img src="images/prod1.jpg" alt="Image" class="w-100">
+							</div>
+							<div class="col-4 p-0">
+								<div class="col-md-6">
+									<h5>
+										Product 1
+									</h5>
+								</div>
+								<div class="col-md-6">
+									<p>
+										$49.00 	
+									</p>
+								</div>
+							</div>
+							<div class="col-3 p-0 d-flex align-items-center">
+								<div class="d-flex justify-content-center align-items-center">
+									<div class="input-group mb-3 d-flex align-items-center quantity-container" style="max-width: 140px;">
+										<input type="number" class="ms-1 me-1 form-control text-center quantity-amount" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+									  </div>
+								</div>
+							</div>
+							<div class="col-1 d-flex align-items-center mb-3">
+								<div>
+									<a href="#" class="btn btn-2 btn-black btn-sm">X</a>	
+								</div>	
+							</div>
+						</div>
+					</form>
+				</div>
+
+              <div class="row mb-5 d-none d-md-block">
                 <form class="col-md-12" method="post">
                   <div class="site-blocks-table">
                     <table class="table">
@@ -71,8 +105,6 @@
 							<th class="product-thumbnail">صورة</th>
 							<th class="product-name">المنتج</th>
 							<th class="product-price">السعر</th>
-							<th class="product-quantity">الكمية</th>
-							<th class="product-total">المجموع</th>
 							<th class="product-remove">إزالة</th>
                         </tr>
                       </thead>
@@ -85,43 +117,22 @@
                             <h2 class="h5 text-black">Product 1</h2>
                           </td>
                           <td>$49.00</td>
-                          <td>
-							<div class="d-flex justify-content-center">
-								<div class="input-group mb-3 d-flex align-items-center quantity-container" style="max-width: 120px;">
-									<div class="input-group-prepend">
-									  <button class="btn btn-2 btn-outline-black decrease" type="button">&minus;</button>
-									</div>
-									<input type="text" class="ms-1 me-1 form-control text-center quantity-amount" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-									<div class="input-group-append">
-									  <button class="btn btn-2 btn-outline-black increase" type="button">&plus;</button>
-									</div>
+						  <td>
+							<div class="d-flex justify-content-center align-items-center">
+								<div class="input-group mb-3 d-flex align-items-center quantity-container" style="max-width: 140px;">
+									<input type="number" class="ms-1 me-1 form-control text-center quantity-amount" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
 								  </div>
 							</div>
-                          </td>
-                          <td>$49.00</td>
+						  </td>
                           <td><a href="#" class="btn btn-2 btn-black btn-sm">X</a></td>
                         </tr>
-        
+						
                         <tr>
 							<td class="product-thumbnail">
 							  <img src="images/prod1.jpg" alt="Image" class="w-105 img-fluid">
 							</td>
 							<td class="product-name">
 							  <h2 class="h5 text-black">Product 1</h2>
-							</td>
-							<td>$49.00</td>
-							<td>
-							  <div class="d-flex justify-content-center">
-								  <div class="input-group mb-3 d-flex align-items-center quantity-container" style="max-width: 120px;">
-									  <div class="input-group-prepend">
-										<button class="btn btn-2 btn-outline-black decrease" type="button">&minus;</button>
-									  </div>
-									  <input type="text" class="ms-1 me-1 form-control text-center quantity-amount" value="1" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-									  <div class="input-group-append">
-										<button class="btn btn-2 btn-outline-black increase" type="button">&plus;</button>
-									  </div>
-									</div>
-							  </div>
 							</td>
 							<td>$49.00</td>
 							<td><a href="#" class="btn btn-2 btn-black btn-sm">X</a></td>
@@ -138,6 +149,9 @@
                     <div class="col-md-6">
                       <a href="shop.html"><button class="btn btn-outline-black btn-sm btn-block">متابعة التسوق</button></a>
                     </div>
+					<div class="col-md-6">
+						<a href="shop.html"><button class="btn btn-outline-black btn-sm btn-block">متابعة التسوق</button></a>
+					  </div>
                   </div>
                 </div>
                 <div class="col-md-6 pl-5">
