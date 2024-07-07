@@ -59,9 +59,9 @@
     </nav>
     <!-- End Header/Navigation -->
 
-    <div class="free-shipping d-flex align-items-center justify-content-center">
+    <div class="free-shipping d-flex align-items-center z-ind-top justify-content-center" style="direction: ltr;">
         <img src="icons/truck-svgrepo-com.svg" alt="">
-        <p>FREE shiping</p>
+        <p>الشحن مجاني</p>
     </div>
 
 	<div class="container">
@@ -77,78 +77,31 @@
 
                     <div class="col-md-7 mt-4">
                         <div class="single-product-content">
-                            <h3>Étagère murale décorative</h3>
-                            <p>Pack de deux  Étagère décorative nouvelle et distincte pour les propriétaires du haut ducAVEC LES TRUC DINSTALATION Les mesure 2 Etagères murales simple en Bois 30/14/1.8 cm </p>
+                            <h3>رف حائط زينة</h3>
+                            <strong class="product-price">250 درهم</strong>
+                            <p>مجموعة من رفين زينة جديدتين ومميزتين لأصحاب الذوق الرفيع مع الأدوات اللازمة للتثبيت. قياسات الرفين الحائطيين البسيطين المصنوعين من الخشب: 30 × 14 × 1.8 سم </p>
                         </div>
                     </div>
 
-                    <div class="col-md-12 mt-4 single-product-form">
-                        <form action="thankyou.html" methode="get" class="ms-3">
+                    <div class="col-md-12 mt-4 single-product-form" style="direction: ltr;">
+                        <form action="thankyou.html" methode="get" class="ms-3" id="prodForm">
                             <div class="row align-items-center justify-content-center">
-                                <div class="col-lg-5 p-0">
+                                <div class="col-lg-6 col-10 p-0">
                                     <input type="text" id="Prodname" name="prodName" hidden value="product_4" class="w-100">
+                                    <input type="text" id="imageProd" hidden value="images/prod4.jpg" class="w-100">
+                                    <input type="text" id="prodnm" hidden value="رف حائط زينة" class="w-100">
+                                    <input type="text" id="prodPrice" hidden value="250" class="w-100">
                                     <div class="">
                                         <div class="d-flex">
-                                            <div class="w-10 icon d-flex align-items-center">
-                                                <img src="icons/person-button-svgrepo-com.svg" alt="">
+                                            <div class="mb-0 icon d-flex align-items-center">
+                                                <img src="icons/number-svgrepo-com.svg" alt="">
                                             </div>
-                                            <input type="text" id="name" name="name" placeholder="Nom | الإسم الكامل" class="w-100">
+                                            <input type="number" id="qte" name="qte" placeholder="Quantity | الكمية" class="w-100 mb-0">
                                         </div>
-                                    </div>     
-                                    <div class="">
-                                        <div class="d-flex">
-                                            <div class="w-10 icon d-flex align-items-center">
-                                                <img src="icons/telephone-round-svgrepo-com.svg" alt="">
-                                            </div>
-                                            <input type="text" name="tele" placeholder="Téléphone | رقم الهاتف" id="tele" class="w-100">
-                                        </div>
-                                    </div>     
-                                    <div class="">
-                                        <div class="d-flex">
-                                            <div class="w-10 icon d-flex align-items-center">
-                                                <img src="icons/map-point-wave-svgrepo-com.svg" alt="">
-                                            </div>
-                                            <input type="text" name="ville" placeholder="Ville | المدينة" id="adrss" class="w-100">
-                                        </div>
-                                    </div>     
+                                    </div>      
                                 </div>  
-                                <div class="col-lg-1"></div>       
-                                <div class="col-lg-6 p-0 radio-form">
-                                    <input type="radio" id="image1" hidden name="prodvar" value="var1" checked>
-                                    <label for="image1" class="d-flex w-auto"> 
-                                        <img src="images/prod4.jpg" alt="Image 1">
-                                        <div class="radio-form-text d-flex align-items-center w-100">
-                                            <p class="w-auto">1 Etagrie</p>
-                                            <p class="price text-end">250dh</p>
-                                        </div> 
-                                    </label>
-                
-                                    <input type="radio" id="image2" hidden name="prodvar" value="var2">
-                                    <label for="image2" class="d-flex w-auto">
-                                        <img src="images/prod4.jpg" alt="Image 1">
-                                        <div class="radio-form-text d-flex align-items-center w-100">
-                                            <p class="w-auto">2 Etagrie</p>
-                                            <div class="price text-end">
-                                                <p class="w-100 price text-end"><del>500dh</del></p>
-                                                <p class="w-100 price text-end">475dh</p>
-                                            </div>
-                                        </div> 
-                                    </label>
-
-                                    <input type="radio" id="image3" hidden name="prodvar" value="var3">
-                                    <label for="image3" class="d-flex w-auto">
-                                        <img src="images/prod4.jpg" alt="Image 1">
-                                        <div class="radio-form-text d-flex align-items-center w-100">
-                                            <p class="w-auto">3 Etagrie</p>
-                                            <div class="price text-end">
-                                                <p class="w-100 price text-end"><del>750dh</del></p>
-                                                <p class="w-100 price text-end">700dh</p>
-                                            </div>
-                                        </div> 
-                                    </label>
-                                </div>  
-                                <div class="col-11">
-                                    <input type="submit" value=" Commander ! اطلب الآن " class="cart-btn w-100">
+                                <div class="col-11 col-lg-6">
+                                    <button type="submit"  class="cart-btn w-100">أضف إلى السلة</button>
                                 </div>                
                             </div>
                         </form>
@@ -161,79 +114,65 @@
         <!-- more products -->
         <div class="more-products mt-5">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 offset-lg-2 text-center">
+                <div class="row d-flex justify-content-center ">
+                    <div class="col-lg-8 text-center">
                         <div class="section-title mb-1">	
-                            <h3><span class="second-color-text">Related</span> Products</h3>
-                            <p class="w-100">You May Also Like</p>
+                            <h3><span class="second-color-text">المنتجات</span> ذات الصلة</h3>
+                            <p class="w-100">قد يعجبك أيضًا                            </p>
                         </div>
                     </div>
                 </div>
 
-                <div class="more-products mt-5">
+                <div class="product-section">
                     <div class="container">
-                        <div class="row">
-                            <div class="col-lg-8 offset-lg-2 text-center">
-                                <div class="section-title mb-1">	
-                                    <h3><span class="second-color-text">Related</span> Products</h3>
-                                    <p class="w-100">You May Also Like</p>
-                                </div>
-                            </div>
-                        </div>
+                        <div class="row justify-content-between">
+                            <!-- Start Column 2 -->
+                            <div class="col-12 col-md-4 col-lg-3 mb-5 me-3 mb-md-0">
+                                <a class="product-item" href="prod.html">
+                                    <img src="images/prod1.jpg" class="img-fluid product-thumbnail">
+                                    <h3 class="product-title">رف زينة</h3>
+                                    <strong class="product-price">750 درهم</strong>
+
+                                    <span class="icon-cross">
+                                        <img src="images/cross.svg" class="img-fluid">
+                                    </span>
+                                </a>
+                            </div> 
+                            <!-- End Column 2 -->
         
-                        <div class="product-section">
-                            <div class="container">
-                                <div class="row justify-content-between">
-                                    <!-- Start Column 2 -->
-                                    <div class="col-12 col-md-4 col-lg-3 mb-5 me-3 mb-md-0">
-                                        <a class="product-item" href="prod2.html">
-                                            <img src="images/prod2.jpg" class="img-fluid product-thumbnail">
-                                            <h3 class="product-title">Etagère Décorative</h3>
-                                            <strong class="product-price">750dh</strong>
+                            <!-- Start Column 3 -->
+                            <div class="col-12 col-md-4 col-lg-3 mb-5 me-3 mb-md-0">
+                                <a class="product-item" href="prod2.html">
+                                    <img src="images/prod2.jpg" class="img-fluid product-thumbnail">
+                                    <h3 class="product-title">رف زينة</h3>
+                                    <strong class="product-price">750 درهم</strong>
+
+                                    <span class="icon-cross">
+                                        <img src="images/cross.svg" class="img-fluid">
+                                    </span>
+                                </a>
+                            </div> 
+                            <!-- End Column 3 -->
         
-                                            <span class="icon-cross">
-                                                <img src="images/cross.svg" class="img-fluid">
-                                            </span>
-                                        </a>
-                                    </div> 
-                                    <!-- End Column 2 -->
-        
-                                    <!-- Start Column 3 -->
-                                    <div class="col-12 col-md-4 col-lg-3 mb-5 me-3 mb-md-0">
-                                        <a class="product-item" href="prod3.html">
-                                            <img src="images/prod3.jpg" class="img-fluid product-thumbnail">
-                                            <h3 class="product-title">Etagere Murale De Decoration Noire</h3>
-                                            <strong class="product-price">1000 Dh</strong>
-        
-                                            <span class="icon-cross">
-                                                <img src="images/cross.svg" class="img-fluid">
-                                            </span>
-                                        </a>
-                                    </div> 
-                                    <!-- End Column 3 -->
-        
-                                    <!-- Start Column 4 -->
-                                    <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-                                        <a class="product-item" href="prod.html">
-                                            <img src="images/prod1.jpg" class="img-fluid product-thumbnail">
-                                            <h3 class="product-title">Etagère Décorative</h3>
-                                            <strong class="product-price">750dh</strong>    
-        
-                                            <span class="icon-cross">
-                                                <img src="images/cross.svg" class="img-fluid">
-                                            </span>
-                                        </a>
-                                    </div> 
-                                    <!-- End Column 4 -->
+                            <!-- Start Column 4 -->
+                            <div class="col-12 col-md-4 col-lg-3 mb-5 me-3 mb-md-0">
+                                <a class="product-item" href="prod3.html">
+                                    <img src="images/prod3.jpg" class="img-fluid product-thumbnail">
+                                    <h3 class="product-title">رف حائط زينة أسود</h3>
+                                    <strong class="product-price">1000 درهم</strong>
+
+                                    <span class="icon-cross">
+                                        <img src="images/cross.svg" class="img-fluid">
+                                    </span>
+                                </a>
+                            </div> 
+                            <!-- End Column 4 -->
                 
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- end more products -->
     </div>
 
     <!-- Start Footer Section -->
@@ -270,6 +209,25 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/tiny-slider.js"></script>
     <script src="js/custom.js"></script>
+
+    <script>
+        document.getElementById('prodForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const itemName = document.getElementById('Prodname').value;
+            var quantity = document.getElementById('qte').value;
+            const image = document.getElementById('imageProd').value;
+            const name = document.getElementById('prodnm').value;
+            const price = document.getElementById('prodPrice').value;
+
+            if(isNaN(parseInt(quantity))){
+                quantity = 1;
+            }
+
+            addItemToCart(itemName, parseInt(quantity), image, name, parseFloat(price));
+
+            window.location.href = './cart.html';
+        });
+    </script>
 </body>
 </html>
 

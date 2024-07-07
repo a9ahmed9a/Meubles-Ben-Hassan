@@ -119,11 +119,11 @@
         <!-- more products -->
         <div class="more-products mt-5">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 offset-lg-2 text-center">
+                <div class="row d-flex justify-content-center ">
+                    <div class="col-lg-8 text-center">
                         <div class="section-title mb-1">	
-                            <h3><span class="second-color-text">Related</span> Products</h3>
-                            <p class="w-100">You May Also Like</p>
+                            <h3><span class="second-color-text">المنتجات</span> ذات الصلة</h3>
+                            <p class="w-100">قد يعجبك أيضًا                            </p>
                         </div>
                     </div>
                 </div>
@@ -135,8 +135,8 @@
                             <div class="col-12 col-md-4 col-lg-3 mb-5 me-3 mb-md-0">
                                 <a class="product-item" href="prod.html">
                                     <img src="images/prod1.jpg" class="img-fluid product-thumbnail">
-                                    <h3 class="product-title">Etagère Décorative</h3>
-                                    <strong class="product-price">750dh</strong>
+                                    <h3 class="product-title">رف زينة</h3>
+                                    <strong class="product-price">750 درهم</strong>
 
                                     <span class="icon-cross">
                                         <img src="images/cross.svg" class="img-fluid">
@@ -149,8 +149,8 @@
                             <div class="col-12 col-md-4 col-lg-3 mb-5 me-3 mb-md-0">
                                 <a class="product-item" href="prod2.html">
                                     <img src="images/prod2.jpg" class="img-fluid product-thumbnail">
-                                    <h3 class="product-title">Etagère Décorative</h3>
-                                    <strong class="product-price">750dh</strong>
+                                    <h3 class="product-title">رف زينة</h3>
+                                    <strong class="product-price">750 درهم</strong>
 
                                     <span class="icon-cross">
                                         <img src="images/cross.svg" class="img-fluid">
@@ -163,8 +163,8 @@
                             <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
                                 <a class="product-item" href="prod4.html">
                                     <img src="images/prod4.jpg" class="img-fluid product-thumbnail">
-                                    <h3 class="product-title">Étagère murale décorative</h3>
-                                    <strong class="product-price">250dh</strong>
+                                    <h3 class="product-title">رف حائط زينة</h3>
+                                    <strong class="product-price">250 درهم</strong>
 
                                     <span class="icon-cross">
                                         <img src="images/cross.svg" class="img-fluid">
@@ -215,6 +215,25 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/tiny-slider.js"></script>
     <script src="js/custom.js"></script>
+
+    <script>
+        document.getElementById('prodForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const itemName = document.getElementById('Prodname').value;
+            var quantity = document.getElementById('qte').value;
+            const image = document.getElementById('imageProd').value;
+            const name = document.getElementById('prodnm').value;
+            const price = document.getElementById('prodPrice').value;
+
+            if(isNaN(parseInt(quantity))){
+                quantity = 1;
+            }
+
+            addItemToCart(itemName, parseInt(quantity), image, name, parseFloat(price));
+
+            window.location.href = './cart.html';
+        });
+    </script>
 </body>
 </html>
 
