@@ -211,7 +211,7 @@
     const desktopView = document.querySelector('.site-blocks-table tbody');
     
     try {
-      const snapshot = await firestore.collection('products').get();
+      const snapshot = await doc(firestore, 'carts', userId);
       snapshot.forEach((doc) => {
         const data = doc.data();
         
