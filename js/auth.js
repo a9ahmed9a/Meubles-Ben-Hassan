@@ -74,7 +74,7 @@ const addItemToCart = async (itemName, quantity = 1, image, name, price) => {
     }
 };
 
-const fetchAndDisplayData = async => {
+const fetchAndDisplayData = async() => {
     const mobileView = document.querySelector('.row.d-md-none');
     const desktopView = document.querySelector('.site-blocks-table tbody');
     
