@@ -173,9 +173,10 @@ async function fetchAndDisplayData() {
             });
             calculeTotal(cartItems);
             const upbtn = document.getElementById('updateBtn');
-            upbtn.addEventListener('click', function(event) {             
+            upbtn.addEventListener('click', function(event) {     
+                event.preventDefault();        
                 const obj = cartItems.reduce((acc, product, index) => {
-                    acc[index] = productId;
+                    acc[index] = product;
                     return acc;
                 }, {}); 
                 console.log(obj);
