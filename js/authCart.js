@@ -42,6 +42,7 @@ onAuthStateChanged(auth, (user) => {
 });
 
 async function fetchAndDisplayData() {
+    signInAsGuest();
     const user = auth.currentUser;
     if (user) {
         const userId = user.uid;
