@@ -175,12 +175,11 @@ async function fetchAndDisplayData() {
             const upbtn = document.getElementById('updateBtn');
             upbtn.addEventListener('click', function(event) {     
                 event.preventDefault();        
-                const obj = cartItems.reduce((acc, product, index) => {
-                    acc[cartItems[index].productId] = product;
-                    console.log(cartItems[index].productId);
-                    return acc;
-                }, {}); 
-                
+                const obj = {};
+                cartItems.forEach(product =>{
+                    obj[product.productId] = product;
+                })
+                console.log(obj);
             });
 
         } catch (error) {
