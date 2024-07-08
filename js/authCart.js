@@ -22,8 +22,7 @@ const firestore = getFirestore(app);
 async function fetchAndDisplayData() {
     const userCredential = await signInAnonymously(auth);
 
-    // Sign-in successful, proceed with data fetching and display
-    const user = userCredential.user; // Access user object after successful sign-in
+    const user = userCredential.user;
     if (user) {
         const userId = user.uid;
     
@@ -180,13 +179,19 @@ async function fetchAndDisplayData() {
                 cartItems.forEach(product =>{
                     obj[product.id] = product;
                 })
-                origItems.forEach(product =>{
-                    if(product.id in obj)
-                    obj[product.id] = FieldValue.delete();
-                })
-                updateDoc(docRef, obj).then(() => {
+
+                const fieldsToDelete = Object.keys(obj).filter(
+                    fieldId => !obj.hasOwnProperty(fieldId)
+                );
+                
+                if (fieldsToDelete.length > 0) {
+                    const batch = writeBatch(firestore);
+                
+                    batch.update(docRef, { ...obj });
+                    fieldsToDelete.forEach(fieldId => batch.delete(fieldRef(firestore, 'carts', fieldId)));
+                    batch.commit().then(() => {
                     window.location.reload();
-                });
+                })};
             });
 
         } catch (error) {
