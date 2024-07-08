@@ -154,6 +154,12 @@ async function fetchAndDisplayData() {
                 desktopRemoveBtn.textContent = 'X';
                 desktopRemoveTd.appendChild(desktopRemoveBtn);
                 desktopRow.appendChild(desktopRemoveTd);
+                desktopRemoveBtn.addEventListener('click', function handleClick(event) {
+                    event.preventDefault();
+                    const index = cartItems.indexOf(productId);
+                    if (index !== -1)
+                        console.log(index);
+                });
         
                 desktopView.appendChild(desktopRow);
             });
