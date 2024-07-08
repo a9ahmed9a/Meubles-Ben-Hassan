@@ -71,6 +71,8 @@ async function fetchAndDisplayData() {
                 mobileDescDiv.appendChild(mobileDescPriceDiv);
                 mobileRow.appendChild(mobileDescDiv);
         
+                console.log(${data.price * data.quantity});
+
                 const mobileQtyDiv = document.createElement('div');
                 mobileQtyDiv.classList.add('col-3', 'p-0', 'd-flex', 'align-items-center');
                 const mobileQtyContainer = document.createElement('div');
