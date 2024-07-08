@@ -156,7 +156,7 @@ async function fetchAndDisplayData() {
                 desktopRow.appendChild(desktopRemoveTd);
                 desktopRemoveBtn.addEventListener('click', function handleClick(event) {
                     event.preventDefault();
-                    const index = cartItems.indexOf(productId);
+                    const index = cartItems.indexOf(data);
                         console.log(index);
                 });
         
