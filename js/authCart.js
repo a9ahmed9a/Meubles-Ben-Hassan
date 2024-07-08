@@ -191,7 +191,7 @@ async function fetchAndDisplayData() {
                 }
 
                 console.log(updateData);
-                // await updateDoc(docRef, updateData);
+                await updateDoc(docRef, updateData);
             });
 
         } catch (error) {
