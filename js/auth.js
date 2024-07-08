@@ -65,7 +65,7 @@ const addItemToCart = async (itemName, quantity = 1, image, name, price) => {
 
             // Save the updated cart
             await setDoc(cartDocRef, cartItems);
-            console.log("Item added to cart:", cartItems[itemName]);
+            window.location.href = './cart.html';
         } catch (error) {
             console.error("Error adding item to cart:", error);
         }
