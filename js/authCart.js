@@ -41,39 +41,6 @@ onAuthStateChanged(auth, (user) => {
     }
 });
 
-const addItemToCart = async (itemName, quantity = 1, image, name, price) => {
-    const user = auth.currentUser;
-    if (user) {
-        const userId = user.uid;
-        const cartDocRef = doc(firestore, 'carts', userId);
-
-        try {
-            const cartDoc = await getDoc(cartDocRef);
-            let cartItems = {};
-            if (cartDoc.exists()) {
-                cartItems = cartDoc.data();
-            }
-
-            // Update cart items
-            cartItems[itemName] = {
-                id: itemName,
-                quantity: quantity,
-                image: image,
-                name: name,
-                price: price
-            };
-
-            // Save the updated cart
-            await setDoc(cartDocRef, cartItems);
-            console.log("Item added to cart:", cartItems[itemName]);
-        } catch (error) {
-            console.error("Error adding item to cart:", error);
-        }
-    } else {
-        console.error("User is not authenticated");
-    }
-};
-
 async function fetchAndDisplayData() {
     const user = auth.currentUser;
     if (user) {
@@ -207,5 +174,4 @@ async function fetchAndDisplayData() {
 }
 };
 
-
-window.addItemToCart = addItemToCart;
+window.onload = fetchAndDisplayData;
