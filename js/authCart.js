@@ -177,9 +177,10 @@ async function fetchAndDisplayData() {
                 event.preventDefault();        
                 const obj = cartItems.reduce((acc, product, index) => {
                     acc[cartItems[index].productId] = product;
+                    console.log(cartItems[index].productId);
                     return acc;
                 }, {}); 
-                console.log(obj);
+                
             });
 
         } catch (error) {
