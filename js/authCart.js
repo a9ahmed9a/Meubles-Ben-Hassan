@@ -23,7 +23,6 @@ async function fetchAndDisplayData() {
     const userCredential = await signInAnonymously(auth);
 
     // Sign-in successful, proceed with data fetching and display
-    console.log("Guest signed in successfully!");
     const user = userCredential.user; // Access user object after successful sign-in
     if (user) {
         const userId = user.uid;
@@ -173,8 +172,15 @@ async function fetchAndDisplayData() {
                 desktopView.appendChild(desktopRow);
             });
             calculeTotal(cartItems);
-            console.log(cartItems);
-            console.log(snapshot.data())
+            const upbtn = document.getElementById('updateBtn');
+            upbtn.addEventListener('click', function(event) {             
+                const obj = cartItems.reduce((acc, product, index) => {
+                    acc[index] = productId;
+                    return acc;
+                }, {}); 
+                console.log(obj);
+            });
+
         } catch (error) {
             console.error("Error fetching data: ", error);
         }
@@ -189,10 +195,23 @@ function calculeTotal(list){
         list.forEach(prod =>{
             total += prod.price * prod.quantity;
         });
-        console.log(total);
     }
     const paragraphElement = document.getElementById('prix');
     paragraphElement.textContent = total;   
+}
+
+function updateCarte(){
+    
+    desktopRemoveBtn.addEventListener('click', function handleClick(event) {
+        event.preventDefault();
+        const index = cartItems.indexOf(data);
+        if (index !== -1) {
+            cartItems.splice(index, 1);
+            desktopRow.classList.add('d-none');
+            mobileRow.classList.add('d-none');
+            calculeTotal(cartItems);
+        }
+    });
 }
 
 window.onload = fetchAndDisplayData;
