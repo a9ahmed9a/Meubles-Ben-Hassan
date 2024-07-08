@@ -101,8 +101,13 @@ async function fetchAndDisplayData() {
                 mobileRemoveBtn.addEventListener('click', function handleClick(event) {
                     event.preventDefault();
                     const index = cartItems.indexOf(productId);
-                    if (index !== -1)
-                        console.log(index);
+                    if (index !== -1) {
+                        cartItems.splice(index, 1);
+                        desktopRow.classList.add('d-none');
+                        mobileRow.classList.add('d-none');
+                        calculeTotal(cartItems);
+                    }
+
                 });
                 
                 mobileForm.appendChild(mobileRow);
@@ -161,11 +166,13 @@ async function fetchAndDisplayData() {
                         cartItems.splice(index, 1);
                         desktopRow.classList.add('d-none');
                         mobileRow.classList.add('d-none');
+                        calculeTotal(cartItems);
                     }
                 });
         
                 desktopView.appendChild(desktopRow);
             });
+            calculeTotal(cartItems);
         } catch (error) {
             console.error("Error fetching data: ", error);
         }
@@ -173,5 +180,16 @@ async function fetchAndDisplayData() {
         console.log("user !!!!");
     }
 };
+
+function calculeTotal(list){
+    var total = 0;
+    if(list.lenght == 0){
+        list.forEach(prod =>{
+            total += prod.price * prod.quantity;
+        });
+    }
+    const paragraphElement = document.getElementById('prix');
+    paragraphElement.textContent = total;
+}
 
 window.onload = fetchAndDisplayData;
