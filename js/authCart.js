@@ -173,6 +173,8 @@ async function fetchAndDisplayData() {
                 desktopView.appendChild(desktopRow);
             });
             calculeTotal(cartItems);
+            console.log(cartItems);
+            console.log(snapshot.data())
         } catch (error) {
             console.error("Error fetching data: ", error);
         }
