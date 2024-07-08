@@ -189,7 +189,6 @@ function calculeTotal(list){
         });
     }
     const paragraphElement = document.getElementById('prix');
-    console.log(total);
     paragraphElement.textContent = total;   
 }
 
