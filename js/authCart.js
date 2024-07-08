@@ -187,6 +187,7 @@ function calculeTotal(list){
         list.forEach(prod =>{
             total += prod.price * prod.quantity;
         });
+        console.log(total);
     }
     const paragraphElement = document.getElementById('prix');
     paragraphElement.textContent = total;   
