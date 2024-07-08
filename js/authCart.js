@@ -180,7 +180,7 @@ async function fetchAndDisplayData() {
                     obj[product.id] = product;
                 })
                 updateDoc(docRef, obj).then(() => {
-                    window.location.reload();
+                    console.log(obj);
                 });
             });
 
