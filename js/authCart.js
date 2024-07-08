@@ -179,7 +179,8 @@ async function fetchAndDisplayData() {
                 cartItems.forEach(product =>{
                     obj[product.id] = product;
                 })
-                console.log(obj);
+                docRef.update(obj);
+                window.location.reload();
             });
 
         } catch (error) {
