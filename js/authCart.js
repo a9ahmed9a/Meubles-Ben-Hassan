@@ -66,7 +66,7 @@ async function fetchAndDisplayData() {
                 const mobileDescPriceDiv = document.createElement('div');
                 mobileDescPriceDiv.classList.add('col-md-6');
                 const mobilePrice = document.createElement('p');
-                mobilePrice.textContent = `${data.price} درهم`;
+                mobilePrice.textContent = `${data.price * data.quantity} درهم`;
                 mobileDescPriceDiv.appendChild(mobilePrice);
                 mobileDescDiv.appendChild(mobileDescPriceDiv);
                 mobileRow.appendChild(mobileDescDiv);
@@ -80,6 +80,7 @@ async function fetchAndDisplayData() {
                 mobileQtyInputGroup.style.maxWidth = '140px';
                 const mobileQtyInput = document.createElement('input');
                 mobileQtyInput.type = 'number';
+                mobileQtyInput.value = data.quantity;
                 mobileQtyInput.classList.add('ms-1', 'me-1', 'form-control', 'text-center', 'quantity-amount');
                 mobileQtyInput.value = '1';
                 mobileQtyInputGroup.appendChild(mobileQtyInput);
