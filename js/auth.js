@@ -75,7 +75,7 @@ const addItemToCart = async (itemName, quantity = 1, image, name, price) => {
 };
 
 
-window.userId = userId;
+window.userId = auth.currentUser.uid;
 window.firestore = firestore;
 window.doc = doc;
 window.getDoc = getDoc;
