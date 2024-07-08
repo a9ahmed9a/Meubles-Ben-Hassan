@@ -35,7 +35,7 @@ async function fetchAndDisplayData() {
             const docRef = doc(firestore, 'carts', userId);
             const snapshot = await getDoc(docRef);
             
-            Object.keys(cartData).forEach(productId => {
+            Object.keys(snapshot.data()).forEach(productId => {
                 const data = cartData[productId];
                 console.log(data);
 
