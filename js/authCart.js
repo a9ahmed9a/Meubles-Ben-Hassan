@@ -189,7 +189,8 @@ function calculeTotal(list){
         });
     }
     const paragraphElement = document.getElementById('prix');
-    paragraphElement.textContent = total;
+    console.log(total);
+    paragraphElement.textContent = total;   
 }
 
 window.onload = fetchAndDisplayData;
