@@ -176,7 +176,7 @@ async function fetchAndDisplayData() {
             upbtn.addEventListener('click', function(event) {     
                 event.preventDefault();        
                 const obj = cartItems.reduce((acc, product, index) => {
-                    acc[cartItems.productId] = product;
+                    acc[cartItems[index].productId] = product;
                     return acc;
                 }, {}); 
                 console.log(obj);
