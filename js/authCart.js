@@ -1,7 +1,7 @@
 // auth.js
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";	 
 import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-import { getFirestore, doc, setDoc, getDoc, updateDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+import { getFirestore, doc, setDoc, getDoc, updateDoc, FieldValue } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 // Your Firebase configuration
 const firebaseConfig = {	  
