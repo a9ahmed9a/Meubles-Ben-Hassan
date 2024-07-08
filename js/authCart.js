@@ -157,7 +157,11 @@ async function fetchAndDisplayData() {
                 desktopRemoveBtn.addEventListener('click', function handleClick(event) {
                     event.preventDefault();
                     const index = cartItems.indexOf(data);
-                        console.log(index);
+                    if (index !== -1) {
+                        cartItems.splice(index, 1);
+                        desktopRow.add('d-none');
+                        mobileRow.add('d-none');
+                    }
                 });
         
                 desktopView.appendChild(desktopRow);
