@@ -66,7 +66,7 @@ async function fetchAndDisplayData() {
                 const mobileDescPriceDiv = document.createElement('div');
                 mobileDescPriceDiv.classList.add('col-md-6');
                 const mobilePrice = document.createElement('p');
-                mobilePrice.textContent = `درهم ${data.price}`;
+                mobilePrice.textContent = `${data.price} درهم`;
                 mobileDescPriceDiv.appendChild(mobilePrice);
                 mobileDescDiv.appendChild(mobileDescPriceDiv);
                 mobileRow.appendChild(mobileDescDiv);
@@ -120,7 +120,7 @@ async function fetchAndDisplayData() {
                 desktopRow.appendChild(desktopNameTd);
                 
                 const desktopPriceTd = document.createElement('td');
-                desktopPriceTd.textContent = `درهم ${data.price}`;
+                desktopPriceTd.textContent = `${data.price} درهم`;
                 desktopRow.appendChild(desktopPriceTd);
                 
                 const desktopQtyTd = document.createElement('td');
