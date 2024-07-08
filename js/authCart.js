@@ -158,11 +158,11 @@ async function fetchAndDisplayData() {
                 desktopQtyTd.appendChild(desktopQtyContainer);
                 desktopRow.appendChild(desktopQtyTd);
                 desktopQtyInput.addEventListener('input', (event) => {
+                    console.log(cartItems[productId]);
                     const newValue = event.target.value;
                     cartItems[productId].quantity = newValue;
                     mobileQtyInput.value = data.quantity;
                     desktopQtyInput.value = data.quantity;
-                    console.log(cartItems[productId]);
                 });
 
                 const desktopRemoveTd = document.createElement('td');
