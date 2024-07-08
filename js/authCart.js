@@ -35,9 +35,8 @@ async function fetchAndDisplayData() {
             const docRef = doc(firestore, 'carts', userId);
             const snapshot = await getDoc(docRef);
 
-            for (const doc in snapshot.data()) {
-                console.log("doc : " + doc);
-                const data = doc.data();
+            for (const data in snapshot.data()) {
+                console.log("doc : " + data);
                 
                 const mobileForm = document.createElement('form');
                 mobileForm.method = 'post';
