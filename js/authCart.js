@@ -162,6 +162,7 @@ async function fetchAndDisplayData() {
                     cartItems[productId].quantity = newValue;
                     mobileQtyInput.value = data.quantity;
                     desktopQtyInput.value = data.quantity;
+                    console.log(cartItems[productId]);
                 });
 
                 const desktopRemoveTd = document.createElement('td');
