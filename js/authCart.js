@@ -177,7 +177,7 @@ async function fetchAndDisplayData() {
                 event.preventDefault();        
                 const obj = {};
                 cartItems.forEach(product =>{
-                    obj[product.productId] = product;
+                    obj[product.id] = product;
                 })
                 console.log(obj);
             });
