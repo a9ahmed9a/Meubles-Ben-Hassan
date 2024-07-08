@@ -158,7 +158,7 @@ async function fetchAndDisplayData() {
                 desktopQtyTd.appendChild(desktopQtyContainer);
                 desktopRow.appendChild(desktopQtyTd);
                 desktopQtyInput.addEventListener('input', (event) => {
-                    console.log(cartItems[productId]);
+                    console.log(cartItems);
                     const newValue = event.target.value;
                     cartItems[productId].quantity = newValue;
                     mobileQtyInput.value = data.quantity;
