@@ -157,13 +157,11 @@ async function fetchAndDisplayData() {
                 desktopRemoveBtn.addEventListener('click', function handleClick(event) {
                     event.preventDefault();
                     const index = cartItems.indexOf(productId);
-                    if (index !== -1)
                         console.log(index);
                 });
         
                 desktopView.appendChild(desktopRow);
             });
-            console.log(cartItems);
         } catch (error) {
             console.error("Error fetching data: ", error);
         }
