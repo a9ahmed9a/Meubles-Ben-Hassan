@@ -20,16 +20,11 @@ const auth = getAuth(app);
 const firestore = getFirestore(app);
 
 async function fetchAndDisplayData() {
-    signInAnonymously(auth)
-        .then(() => {
-            console.log("Guest signed in");
-        })
-        .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            console.error(`Guest sign-in error: ${errorCode} - ${errorMessage}`);
-        });
-    const user = auth.currentUser;
+    const userCredential = await signInAnonymously(auth);
+
+    // Sign-in successful, proceed with data fetching and display
+    console.log("Guest signed in successfully!");
+    const user = userCredential.user; // Access user object after successful sign-in
     if (user) {
         const userId = user.uid;
     
