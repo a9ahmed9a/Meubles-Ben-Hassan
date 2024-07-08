@@ -19,28 +19,6 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const firestore = getFirestore(app);
 
-// Function to handle guest sign-in
-const signInAsGuest = () => {
-    signInAnonymously(auth)
-        .then(() => {
-            console.log("Guest signed in");
-        })
-        .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            console.error(`Guest sign-in error: ${errorCode} - ${errorMessage}`);
-        });
-};
-
-// Check auth state on page load
-onAuthStateChanged(auth, (user) => {
-    if (!user) {
-        signInAsGuest();
-    } else {
-        console.log("User signed in:", user);
-    }
-});
-
 async function fetchAndDisplayData() {
     signInAnonymously(auth)
         .then(() => {
