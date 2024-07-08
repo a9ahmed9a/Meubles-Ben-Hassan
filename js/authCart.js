@@ -1,7 +1,7 @@
 // auth.js
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";	 
 import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-import { getFirestore, doc, setDoc, getDoc, updateDoc, FieldValue } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+import { getFirestore, doc, setDoc, getDoc, updateDoc, deleteField } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 // Your Firebase configuration
 const firebaseConfig = {	  
@@ -173,25 +173,24 @@ async function fetchAndDisplayData() {
             calculeTotal(cartItems);
             const origItems = cartItems;
             const upbtn = document.getElementById('updateBtn');
-            upbtn.addEventListener('click', function(event) {     
+            upbtn.addEventListener('click', async function(event) {     
                 event.preventDefault();        
-                const obj = {};
-                cartItems.forEach(product =>{
-                    obj[product.id] = product;
-                })
+                const originalObj = Object.fromEntries(origItems.map(item => [item.id, item]));
+                const newObj = Object.fromEntries(cartItems.map(item => [item.id, item]));
 
-                const fieldsToDelete = Object.keys(obj).filter(
-                    fieldId => !obj.hasOwnProperty(fieldId)
-                );
-                
-                if (fieldsToDelete.length > 0) {
-                    const batch = writeBatch(firestore);
-                
-                    batch.update(docRef, { ...obj });
-                    fieldsToDelete.forEach(fieldId => batch.delete(fieldRef(firestore, 'carts', fieldId)));
-                    batch.commit().then(() => {
-                    window.location.reload();
-                })};
+                const obj = {};
+
+                for (const [key, value] of Object.entries(newObj)) {
+                    updateData[key] = value;
+                }
+
+                for (const key of Object.keys(originalObj)) {
+                    if (!newObj.hasOwnProperty(key)) {
+                        updateData[key] = deleteField();
+                    }
+                }
+
+                await updateDoc(docRef, updateData);
             });
 
         } catch (error) {
