@@ -183,7 +183,7 @@ async function fetchAndDisplayData() {
 
 function calculeTotal(list){
     var total = 0;
-    if(list.length === 0){
+    if(list.length !== 0){
         list.forEach(prod =>{
             total += prod.price * prod.quantity;
         });
