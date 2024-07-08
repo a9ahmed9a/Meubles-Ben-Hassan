@@ -54,7 +54,9 @@ async function fetchAndDisplayData() {
                 mobileImg.classList.add('w-100');
                 mobileImgDiv.appendChild(mobileImg);
                 mobileRow.appendChild(mobileImgDiv);
-        
+
+
+                const totalPrice = data.price * data.quantity;
                 const mobileDescDiv = document.createElement('div');
                 mobileDescDiv.classList.add('col-4', 'p-0');
                 const mobileDescNameDiv = document.createElement('div');
@@ -66,12 +68,10 @@ async function fetchAndDisplayData() {
                 const mobileDescPriceDiv = document.createElement('div');
                 mobileDescPriceDiv.classList.add('col-md-6');
                 const mobilePrice = document.createElement('p');
-                mobilePrice.textContent = `${data.price * data.quantity} درهم`;
+                mobilePrice.textContent = `${totalPrice} درهم`;
                 mobileDescPriceDiv.appendChild(mobilePrice);
                 mobileDescDiv.appendChild(mobileDescPriceDiv);
                 mobileRow.appendChild(mobileDescDiv);
-        
-                console.log(data.price * data.quantity);
 
                 const mobileQtyDiv = document.createElement('div');
                 mobileQtyDiv.classList.add('col-3', 'p-0', 'd-flex', 'align-items-center');
@@ -123,7 +123,7 @@ async function fetchAndDisplayData() {
                 desktopRow.appendChild(desktopNameTd);
                 
                 const desktopPriceTd = document.createElement('td');
-                desktopPriceTd.textContent = `${data.price} درهم`;
+                desktopPriceTd.textContent = `${totalPrice} درهم`;
                 desktopRow.appendChild(desktopPriceTd);
                 
                 const desktopQtyTd = document.createElement('td');
@@ -134,6 +134,7 @@ async function fetchAndDisplayData() {
                 desktopQtyInputGroup.style.maxWidth = '140px';
                 const desktopQtyInput = document.createElement('input');
                 desktopQtyInput.type = 'number';
+                desktopQtyInput.value=data.quantity;
                 desktopQtyInput.classList.add('ms-1', 'me-1', 'form-control', 'text-center', 'quantity-amount');
                 desktopQtyInput.value = '1';
                 desktopQtyInputGroup.appendChild(desktopQtyInput);
