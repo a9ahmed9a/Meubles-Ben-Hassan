@@ -87,6 +87,7 @@ async function fetchAndDisplayData() {
                     cartItems[productId].quantity = newValue;
                     mobileQtyInput.value = data.quantity;
                     desktopQtyInput.value = data.quantity;
+                    console.log(cartItems[productId]);
                 });
 
                 mobileQtyInput.classList.add('ms-1', 'me-1', 'form-control', 'text-center', 'quantity-amount');
