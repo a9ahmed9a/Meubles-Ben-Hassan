@@ -38,7 +38,7 @@ async function fetchAndDisplayData() {
             
             Object.keys(snapshot.data()).forEach(productId => {
                 const data = snapshot.data()[productId];
-                cartItems.append(data);
+                cartItems.apend(data);
 
                 const mobileForm = document.createElement('form');
                 mobileForm.method = 'post';
