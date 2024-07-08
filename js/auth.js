@@ -79,11 +79,13 @@ const fetchAndDisplayData = async() => {
     const desktopView = document.querySelector('.site-blocks-table tbody');
     
     try {
-      const snapshot = doc(firestore, 'carts', userId);
-      snapshot.forEach((doc) => {
+        const docRef = doc(firestore, 'carts', userId);
+        const snapshot = await getDoc(docRef);
+
+        snapshot.forEach((doc) => {
+
         const data = doc.data();
         
-        // Mobile View
         const mobileForm = document.createElement('form');
         mobileForm.method = 'post';
         mobileForm.classList.add('col-md-12');
