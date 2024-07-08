@@ -191,6 +191,7 @@ async function fetchAndDisplayData() {
                     }
                 }
 
+                console.log(originalObj);
                 await updateDoc(docRef, updateData).then(() => {
                     // window.location.reload();
                 });
