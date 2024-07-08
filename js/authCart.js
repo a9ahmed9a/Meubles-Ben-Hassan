@@ -36,12 +36,9 @@ async function fetchAndDisplayData() {
             const snapshot = await getDoc(docRef);
 
             for (const doc in snapshot.data()) {
-                
-                const data = doc.data();
-                console.log("data : " + data);
-
                 console.log("doc : " + doc);
-
+                const data = doc.data();
+                
                 const mobileForm = document.createElement('form');
                 mobileForm.method = 'post';
                 mobileForm.classList.add('col-md-12');
