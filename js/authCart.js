@@ -34,10 +34,11 @@ async function fetchAndDisplayData() {
         try {
             const docRef = doc(firestore, 'carts', userId);
             const snapshot = await getDoc(docRef);
+            const cartItems = [];
             
             Object.keys(snapshot.data()).forEach(productId => {
                 const data = snapshot.data()[productId];
-                console.log(data);
+                cartItems.append(data);
 
                 const mobileForm = document.createElement('form');
                 mobileForm.method = 'post';
@@ -150,6 +151,7 @@ async function fetchAndDisplayData() {
         
                 desktopView.appendChild(desktopRow);
             });
+            console.log(cartItems);
         } catch (error) {
             console.error("Error fetching data: ", error);
         }
