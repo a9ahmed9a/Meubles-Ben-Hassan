@@ -54,7 +54,6 @@ async function fetchAndDisplayData() {
                 mobileImgDiv.appendChild(mobileImg);
                 mobileRow.appendChild(mobileImgDiv);
 
-
                 const totalPrice = data.price * data.quantity;
                 const mobileDescDiv = document.createElement('div');
                 mobileDescDiv.classList.add('col-4', 'p-0');
@@ -82,6 +81,14 @@ async function fetchAndDisplayData() {
                 const mobileQtyInput = document.createElement('input');
                 mobileQtyInput.type = 'number';
                 mobileQtyInput.value = data.quantity;
+
+                mobileQtyInput.addEventListener('input', (event) => {
+                    const newValue = event.target.value;
+                    cartItems[productId].quantity = newValue;
+                    mobileQtyInput.value = data.quantity;
+                    desktopQtyInput.value = data.quantity;
+                });
+
                 mobileQtyInput.classList.add('ms-1', 'me-1', 'form-control', 'text-center', 'quantity-amount');
                 mobileQtyInputGroup.appendChild(mobileQtyInput);
                 mobileQtyContainer.appendChild(mobileQtyInputGroup);
@@ -149,7 +156,13 @@ async function fetchAndDisplayData() {
                 desktopQtyContainer.appendChild(desktopQtyInputGroup);
                 desktopQtyTd.appendChild(desktopQtyContainer);
                 desktopRow.appendChild(desktopQtyTd);
-                
+                desktopQtyInput.addEventListener('input', (event) => {
+                    const newValue = event.target.value;
+                    cartItems[productId].quantity = newValue;
+                    mobileQtyInput.value = data.quantity;
+                    desktopQtyInput.value = data.quantity;
+                });
+
                 const desktopRemoveTd = document.createElement('td');
                 const desktopRemoveBtn = document.createElement('a');
                 desktopRemoveBtn.href = '#';
@@ -195,7 +208,6 @@ async function fetchAndDisplayData() {
                     window.location.reload();
                 });
             });
-
         } catch (error) {
             console.error("Error fetching data: ", error);
         }
