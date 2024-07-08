@@ -159,8 +159,8 @@ async function fetchAndDisplayData() {
                     const index = cartItems.indexOf(data);
                     if (index !== -1) {
                         cartItems.splice(index, 1);
-                        desktopRow.add('d-none');
-                        mobileRow.add('d-none');
+                        desktopRow.classList.add('d-none');
+                        mobileRow.classList.add('d-none');
                     }
                 });
         
