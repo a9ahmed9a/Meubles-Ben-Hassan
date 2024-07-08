@@ -84,7 +84,6 @@ async function fetchAndDisplayData() {
                 mobileQtyInput.type = 'number';
                 mobileQtyInput.value = data.quantity;
                 mobileQtyInput.classList.add('ms-1', 'me-1', 'form-control', 'text-center', 'quantity-amount');
-                mobileQtyInput.value = '1';
                 mobileQtyInputGroup.appendChild(mobileQtyInput);
                 mobileQtyContainer.appendChild(mobileQtyInputGroup);
                 mobileQtyDiv.appendChild(mobileQtyContainer);
@@ -136,7 +135,6 @@ async function fetchAndDisplayData() {
                 desktopQtyInput.type = 'number';
                 desktopQtyInput.value=data.quantity;
                 desktopQtyInput.classList.add('ms-1', 'me-1', 'form-control', 'text-center', 'quantity-amount');
-                desktopQtyInput.value = '1';
                 desktopQtyInputGroup.appendChild(desktopQtyInput);
                 desktopQtyContainer.appendChild(desktopQtyInputGroup);
                 desktopQtyTd.appendChild(desktopQtyContainer);
