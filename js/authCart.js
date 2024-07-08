@@ -191,7 +191,9 @@ async function fetchAndDisplayData() {
                 }
 
                 console.log(updateData);
-                await updateDoc(docRef, updateData);
+                await updateDoc(docRef, updateData).then(() => {
+                    window.location.reload();
+                });
             });
 
         } catch (error) {
