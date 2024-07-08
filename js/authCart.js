@@ -171,7 +171,7 @@ async function fetchAndDisplayData() {
                 desktopView.appendChild(desktopRow);
             });
             calculeTotal(cartItems);
-            const origItems = cartItems;
+            const origItems = [...cartItems];
             const upbtn = document.getElementById('updateBtn');
             upbtn.addEventListener('click', async function(event) {     
                 event.preventDefault();        
