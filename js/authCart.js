@@ -178,7 +178,7 @@ async function fetchAndDisplayData() {
                 const originalObj = Object.fromEntries(origItems.map(item => [item.id, item]));
                 const newObj = Object.fromEntries(cartItems.map(item => [item.id, item]));
 
-                const obj = {};
+                const updateData = {};
 
                 for (const [key, value] of Object.entries(newObj)) {
                     updateData[key] = value;
@@ -190,7 +190,8 @@ async function fetchAndDisplayData() {
                     }
                 }
 
-                await updateDoc(docRef, updateData);
+                console.log(updateData);
+                // await updateDoc(docRef, updateData);
             });
 
         } catch (error) {
