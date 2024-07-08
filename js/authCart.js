@@ -36,7 +36,7 @@ async function fetchAndDisplayData() {
             const snapshot = await getDoc(docRef);
             
             Object.keys(snapshot.data()).forEach(productId => {
-                const data = cartData[productId];
+                const data = snapshot.data()[productId];
                 console.log(data);
 
                 const mobileForm = document.createElement('form');
