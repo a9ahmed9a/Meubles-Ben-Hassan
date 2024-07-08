@@ -42,7 +42,15 @@ onAuthStateChanged(auth, (user) => {
 });
 
 async function fetchAndDisplayData() {
-    await signInAsGuest();
+    signInAnonymously(auth)
+        .then(() => {
+            console.log("Guest signed in");
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.error(`Guest sign-in error: ${errorCode} - ${errorMessage}`);
+        });
     const user = auth.currentUser;
     if (user) {
         const userId = user.uid;
