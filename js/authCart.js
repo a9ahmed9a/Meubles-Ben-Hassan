@@ -98,6 +98,12 @@ async function fetchAndDisplayData() {
                 mobileRemoveBtn.textContent = 'X';
                 mobileRemoveDiv.appendChild(mobileRemoveBtn);
                 mobileRow.appendChild(mobileRemoveDiv);
+                mobileRemoveBtn.addEventListener('click', function handleClick(event) {
+                    event.preventDefault();
+                    const index = cartItems.indexOf(productId);
+                    if (index !== -1)
+                        console.log(index);
+                });
                 
                 mobileForm.appendChild(mobileRow);
                 mobileView.appendChild(mobileForm);
