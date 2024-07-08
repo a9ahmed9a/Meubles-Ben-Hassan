@@ -187,13 +187,12 @@ async function fetchAndDisplayData() {
                 for (const key of Object.keys(originalObj)) {
                     if (!newObj.hasOwnProperty(key)) {
                         updateData[key] = deleteField();
-                        console.log(updateData[key]);
                     }
                 }
 
                 console.log(originalObj);
                 await updateDoc(docRef, updateData).then(() => {
-                    // window.location.reload();
+                    window.location.reload();
                 });
             });
 
