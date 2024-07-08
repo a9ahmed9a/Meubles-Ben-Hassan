@@ -179,8 +179,9 @@ async function fetchAndDisplayData() {
                 cartItems.forEach(product =>{
                     obj[product.id] = product;
                 })
-                updateDoc(docRef, obj);
-                window.location.reload();
+                updateDoc(docRef, obj).then(() => {
+                    window.location.reload();
+                });
             });
 
         } catch (error) {
