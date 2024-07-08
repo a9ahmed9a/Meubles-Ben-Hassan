@@ -172,6 +172,7 @@ async function fetchAndDisplayData() {
                 desktopView.appendChild(desktopRow);
             });
             calculeTotal(cartItems);
+            const origItems = cartItems;
             const upbtn = document.getElementById('updateBtn');
             upbtn.addEventListener('click', function(event) {     
                 event.preventDefault();        
@@ -179,8 +180,12 @@ async function fetchAndDisplayData() {
                 cartItems.forEach(product =>{
                     obj[product.id] = product;
                 })
+                origItems.forEach(product =>{
+                    if(product.id in obj)
+                    obj[product.id] = FieldValue.delete();
+                })
                 updateDoc(docRef, obj).then(() => {
-                    console.log(obj);
+                    window.location.reload();
                 });
             });
 
