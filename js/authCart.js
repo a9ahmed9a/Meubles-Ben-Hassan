@@ -160,7 +160,7 @@ async function fetchAndDisplayData() {
                 desktopQtyInput.addEventListener('input', (event) => {
                     console.log(cartItems);
                     const newValue = event.target.value;
-                    cartItems.find(obj => obj.id === objectId).quantity = newValue;
+                    cartItems.find(obj => obj.id === productId).quantity = newValue;
                     mobileQtyInput.value = data.quantity;
                     desktopQtyInput.value = data.quantity;
                 });
