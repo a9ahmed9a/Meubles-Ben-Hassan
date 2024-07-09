@@ -84,10 +84,9 @@ async function fetchAndDisplayData() {
 
                 mobileQtyInput.addEventListener('input', (event) => {
                     const newValue = event.target.value;
-                    cartItems[productId].quantity = newValue;
+                    cartItems.find(obj => obj.id === productId).quantity = newValue;
                     mobileQtyInput.value = data.quantity;
                     desktopQtyInput.value = data.quantity;
-                    console.log(cartItems[productId]);
                 });
 
                 mobileQtyInput.classList.add('ms-1', 'me-1', 'form-control', 'text-center', 'quantity-amount');
@@ -158,7 +157,6 @@ async function fetchAndDisplayData() {
                 desktopQtyTd.appendChild(desktopQtyContainer);
                 desktopRow.appendChild(desktopQtyTd);
                 desktopQtyInput.addEventListener('input', (event) => {
-                    console.log(cartItems);
                     const newValue = event.target.value;
                     cartItems.find(obj => obj.id === productId).quantity = newValue;
                     mobileQtyInput.value = data.quantity;
