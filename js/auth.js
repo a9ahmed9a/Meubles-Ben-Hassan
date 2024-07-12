@@ -74,4 +74,28 @@ const addItemToCart = async (itemName, quantity = 1, image, name, price) => {
     }
 };
 
+async function copyDocument(targetCollection, targetDocId) {
+    try {
+      const sourceDocRef = doc(firestore, 'carts', userId);
+      const sourceDoc = await sourceDocRef.get();
+  
+      if (!sourceDoc.exists) {
+        window.location.href = './shop.html';
+      }
+  
+      const data = sourceDoc.data();
+  
+      const targetDocRef = doc(firestore, 'commands');
+      await targetDocRef.set(data);
+  
+      console.log('Document copied successfully!');
+    } catch (error) {
+      console.error('Error copying document: ', error);
+    }
+  }
+  
+  // Usage
+  copyDocument('sourceCollectionName', 'sourceDocId', 'targetCollectionName', 'targetDocId');
+  
+
 window.addItemToCart = addItemToCart;
