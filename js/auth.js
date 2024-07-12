@@ -85,9 +85,9 @@ const addCommand = async (userName, userphone, userAdress) => {
         window.location.href = './shop.html';
       }
   
-      const data = sourceDoc.data();
-      data = {
-        ...data,
+      const Olddata = sourceDoc.data();
+      const data = {
+        ...Olddata,
         name : userName,
         phone : userphone,
         adress : userAdress,
