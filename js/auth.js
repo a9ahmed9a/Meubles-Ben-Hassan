@@ -96,7 +96,7 @@ const addCommand = async (userName, userphone, userAdress, email) => {
   
       const targetDocRef = doc(firestore, 'commands', userName+"_"+Date.now());
       await setDoc(targetDocRef, data);
-    //   await deleteDoc(sourceDocRef);
+      await deleteDoc(sourceDocRef);
       window.location.href = "./thankyou.html";
     } catch (error) {
       console.error('Error copying document: ', error);
