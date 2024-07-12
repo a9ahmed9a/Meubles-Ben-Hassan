@@ -195,8 +195,8 @@
 
             document.getElementById('command').addEventListener('submit', function(event) {
                 form = document.getElementById('command');
+                event.preventDefault();
                 if (form.classList.contains('was-validated')) {
-                    event.preventDefault();
                     const userName = document.getElementById('name').value;
                     const adress = document.getElementById('adress').value;
                     const phone = document.getElementById('phone').value;
