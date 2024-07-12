@@ -90,7 +90,14 @@
                                         <div class="mb-0 icon d-flex align-items-center">
                                             <img src="icons/map-point-wave-svgrepo-com.svg" alt="">
                                         </div>
-                                        <input type="number" id="adress" name="adress" placeholder="Address | العنوان" class="w-100 mb-0">
+                                        <!-- <input type="text" id="adress" name="adress" placeholder="Address | العنوان" class="w-100 mb-0"> -->
+                                        <div class="input-group has-validation">
+                                            <input type="text" class="form-control mb-0" aria-describedby="inputGroupPrepend" required id="adress" name="adress" placeholder="Address | العنوان" class="w-100 mb-0">
+                                            <div class="invalid-feedback">
+                                              Please choose a username.
+                                            </div>
+                                          </div>
+                                      
                                     </div>
                                 </div>      
                             </div>  
@@ -100,10 +107,20 @@
                                         <div class="mb-0 icon d-flex align-items-center">
                                             <img src="icons/telephone-round-svgrepo-com.svg" alt="">
                                         </div>
-                                        <input type="number" id="phone" name="phone" placeholder="Phone number | رقم الهاتف" class="w-100 mb-0">
+                                        <input type="text" id="phone" name="phone" placeholder="Phone number | رقم الهاتف" class="w-100 mb-0">
                                     </div>
                                 </div>      
-                            </div>  
+                            </div>
+                            <div class="col-10 p-0 mb-3">
+                                <div class="">
+                                    <div class="d-flex">
+                                        <div class="mb-0 icon d-flex align-items-center">
+                                            <img src="icons/mail-svgrepo-com.svg" alt="">
+                                        </div>
+                                        <input type="email" id="email" name="email" placeholder="Email | بريد إلكتروني" class="w-100 mb-0">
+                                    </div>
+                                </div>      
+                            </div>   
                             <div class="col-10 p-0">
                                 <button type="submit"  class="cart-btn w-100">طلب</button>
                             </div>                
@@ -164,9 +181,23 @@
 
         <script>
             document.getElementById('command').addEventListener('submit', function(event) {
+
+                if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                }
+
+                form.classList.add('was-validated')
+                }, false)
+
+
                 event.preventDefault();
+                const userName = document.getElementById('name').value;
+                const adress = document.getElementById('adress').value;
+                const phone = document.getElementById('phone').value;
+                const email = document.getElementById('email').value;
     
-                addCommand("Ahmed Ouidani", '0620644127', '105 Bloc 16 Qu Riyad Safi');
+                addCommand(userName, phone, adress, email);
             });
         </script>
 	</body>
