@@ -1,7 +1,7 @@
 // auth.js
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";	 
 import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-import { getFirestore, doc, setDoc, getDoc, updateDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+import { getFirestore, doc, setDoc, getDoc, updateDoc ,deleteDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 // Your Firebase configuration
 const firebaseConfig = {	  
@@ -74,7 +74,7 @@ const addItemToCart = async (itemName, quantity = 1, image, name, price) => {
     }
 };
 
-const addCommand = async (userName) => {
+const addCommand = async (userName, userphone, userAdress) => {
     const user = auth.currentUser;
     const userId = user.uid;
     try {
@@ -86,9 +86,16 @@ const addCommand = async (userName) => {
       }
   
       const data = sourceDoc.data();
+      data = {
+        ...data,
+        name : userName,
+        phone : userphone,
+        adress : userAdress,
+      }
   
       const targetDocRef = doc(firestore, 'commands', userName+"_"+Date.now());
       await setDoc(targetDocRef, data);
+    //   await deleteDoc(sourceDocRef);
       window.location.href = "./thankyou.html";
     } catch (error) {
       console.error('Error copying document: ', error);
