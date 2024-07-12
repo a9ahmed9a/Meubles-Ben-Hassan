@@ -74,7 +74,7 @@ const addItemToCart = async (itemName, quantity = 1, image, name, price) => {
     }
 };
 
-const addCommand = async () => {
+const addCommand = async (userName) => {
     const user = auth.currentUser;
     const userId = user.uid;
     try {
@@ -87,8 +87,8 @@ const addCommand = async () => {
   
       const data = sourceDoc.data();
   
-      const targetDocRef = doc(firestore, 'commands');
-      await targetDocRef.set(data);
+      const targetDocRef = doc(firestore, 'commands', userName+"_"+Date.now);
+      await setDoc(targetDocRef, data);
   
       console.log('Document copied successfully!');
     } catch (error) {
