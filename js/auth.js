@@ -74,7 +74,7 @@ const addItemToCart = async (itemName, quantity = 1, image, name, price) => {
     }
 };
 
-async function copyDocument(targetCollection, targetDocId) {
+const addCommand = async () => {
     try {
       const sourceDocRef = doc(firestore, 'carts', userId);
       const sourceDoc = await sourceDocRef.get();
@@ -93,9 +93,6 @@ async function copyDocument(targetCollection, targetDocId) {
       console.error('Error copying document: ', error);
     }
   }
-  
-  // Usage
-  copyDocument('sourceCollectionName', 'sourceDocId', 'targetCollectionName', 'targetDocId');
-  
-
+    
+window.addCommand = addCommand;
 window.addItemToCart = addItemToCart;
