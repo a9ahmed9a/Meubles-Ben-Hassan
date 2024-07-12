@@ -87,10 +87,9 @@ const addCommand = async (userName) => {
   
       const data = sourceDoc.data();
   
-      const targetDocRef = doc(firestore, 'commands', userName+"_"+Date.now);
+      const targetDocRef = doc(firestore, 'commands', userName+"_"+Date.now());
       await setDoc(targetDocRef, data);
-  
-      console.log('Document copied successfully!');
+      window.location.href = "./thankyou.html";
     } catch (error) {
       console.error('Error copying document: ', error);
     }
