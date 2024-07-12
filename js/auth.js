@@ -75,6 +75,8 @@ const addItemToCart = async (itemName, quantity = 1, image, name, price) => {
 };
 
 const addCommand = async () => {
+    const user = auth.currentUser;
+    const userId = user.uid;
     try {
       const sourceDocRef = doc(firestore, 'carts', userId);
       const sourceDoc = await sourceDocRef.get();
