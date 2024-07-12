@@ -79,7 +79,7 @@ const addCommand = async () => {
     const userId = user.uid;
     try {
       const sourceDocRef = doc(firestore, 'carts', userId);
-      const sourceDoc = await sourceDocRef.get();
+      const sourceDoc = await getDoc(sourceDocRef);
   
       if (!sourceDoc.exists) {
         window.location.href = './shop.html';
